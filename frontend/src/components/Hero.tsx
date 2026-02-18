@@ -22,7 +22,7 @@ const HeroSection = styled(Box)(({ theme }) => ({
         left: 0,
         right: 0,
         bottom: 0,
-        background: 'linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0.2) 100%)',
+        background: 'linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 80%, rgba(255,255,255,0.2) 100%)',
     }
 }));
 
@@ -70,8 +70,8 @@ const Hero = () => {
                             </Typography>
 
                             <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
-                                <Button variant="contained" color="primary" size="large">
-                                    Book a Class
+                                <Button variant="contained" color="primary" size="large" component="a" href="https://bookeo.com/testing123" target="_blank" rel="noopener noreferrer">
+                                    Book Now
                                 </Button>
                             </Stack>
                         </Grid>

@@ -74,25 +74,25 @@ const Lessons = () => {
                             <List sx={{ mb: 'auto' }}>
                                 <ListItem disablePadding sx={{ mb: 1.5 }}>
                                     <ListItemIcon sx={{ minWidth: 36 }}>
-                                        <CheckCircleIcon color="success" fontSize="small" />
+                                        <CheckCircleIcon color="secondary" fontSize="small" />
                                     </ListItemIcon>
                                     <ListItemText primary="Refining specific strokes or techniques" />
                                 </ListItem>
                                 <ListItem disablePadding sx={{ mb: 1.5 }}>
                                     <ListItemIcon sx={{ minWidth: 36 }}>
-                                        <CheckCircleIcon color="success" fontSize="small" />
+                                        <CheckCircleIcon color="secondary" fontSize="small" />
                                     </ListItemIcon>
                                     <ListItemText primary="Overcoming fear of water" />
                                 </ListItem>
                                 <ListItem disablePadding sx={{ mb: 1.5 }}>
                                     <ListItemIcon sx={{ minWidth: 36 }}>
-                                        <CheckCircleIcon color="success" fontSize="small" />
+                                        <CheckCircleIcon color="secondary" fontSize="small" />
                                     </ListItemIcon>
                                     <ListItemText primary="Flexible scheduling (week-to-week)" />
                                 </ListItem>
                                 <ListItem disablePadding sx={{ mb: 1.5 }}>
                                     <ListItemIcon sx={{ minWidth: 36 }}>
-                                        <CheckCircleIcon color="success" fontSize="small" />
+                                        <CheckCircleIcon color="secondary" fontSize="small" />
                                     </ListItemIcon>
                                     <ListItemText primary="Adult learners wanting private space" />
                                 </ListItem>

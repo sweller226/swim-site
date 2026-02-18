@@ -34,10 +34,15 @@ const Header = () => {
                             Home
                         </Button>
                         <Button color={location.pathname === '/lessons' ? 'primary' : 'inherit'} component={Link} to="/lessons">
-                            Lessons
+                            Pricing
                         </Button>
-                        <Button color="inherit" href="/#instructors">Instructors</Button>
-                        <Button variant="contained" color="primary">
+                        <Button color={location.pathname === '/faq' ? 'primary' : 'inherit'} component={Link} to="/faq">
+                            FAQ
+                        </Button>
+                        <Button color={location.pathname === '/contact' ? 'primary' : 'inherit'} component={Link} to="/contact">
+                            Contact Us
+                        </Button>
+                        <Button variant="contained" color="primary" size="large" component="a" href="https://bookeo.com/testing123" target="_blank" rel="noopener noreferrer">
                             Book Now
                         </Button>
                     </Box>

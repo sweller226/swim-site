@@ -1,8 +1,8 @@
 import { Box, Container, Typography, Link, Grid, Stack, IconButton } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import { Link as RouterLink } from 'react-router-dom';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import TwitterIcon from '@mui/icons-material/Twitter';
 
 const FooterContainer = styled('footer')(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
@@ -21,18 +21,18 @@ const footerHeadingSx = {
     mb: 2,
 };
 
-const FooterLink = styled(Link)(({ theme }) => ({
+const footerLinkSx = {
     color: 'rgba(255, 255, 255, 0.88)',
     textDecoration: 'none',
     display: 'block',
-    marginBottom: theme.spacing(1),
+    mb: 1,
     fontSize: '0.95rem',
     fontWeight: 500,
     '&:hover': {
         color: '#fff',
         textDecoration: 'underline',
     },
-}));
+};
 
 const SocialButton = styled(IconButton)(({ theme }) => ({
     color: 'rgba(255, 255, 255, 0.9)',
@@ -51,7 +51,7 @@ const Footer = () => {
                     <Grid size={{ xs: 12, md: 4 }}>
                         <Typography component="h2" sx={footerHeadingSx}>Swim School</Typography>
                         <Typography variant="body2" sx={{ color: 'rgba(255, 255, 255, 0.85)', mb: 3, maxWidth: 300, lineHeight: 1.6 }}>
-                            Building confidence in the water since 2010. We provide a safe, fun, and encouraging environment for swimmers of all ages.
+                            Building confidence in the water. We provide a safe, fun, and encouraging environment for swimmers of all ages.
                         </Typography>
                         <Stack direction="row" spacing={1}>
                             <SocialButton size="small" aria-label="facebook">
@@ -60,20 +60,17 @@ const Footer = () => {
                             <SocialButton size="small" aria-label="instagram">
                                 <InstagramIcon />
                             </SocialButton>
-                            <SocialButton size="small" aria-label="twitter">
-                                <TwitterIcon />
-                            </SocialButton>
                         </Stack>
                     </Grid>
 
                     <Grid size={{ xs: 12, sm: 6, md: 4 }}>
                         <Typography component="h2" sx={footerHeadingSx}>Quick Links</Typography>
                         <Box>
-                            <FooterLink href="#">Home</FooterLink>
-                            <FooterLink href="#classes">Book Classes</FooterLink>
-                            <FooterLink href="#instructors">Our Instructors</FooterLink>
-                            <FooterLink href="#contact">Contact Us</FooterLink>
-                            <FooterLink href="#faq">FAQ</FooterLink>
+                            <Link component={RouterLink} to="/" onClick={() => window.scrollTo(0, 0)} sx={footerLinkSx}>Home</Link>
+                            <Link href="https://bookeo.com/testing123" target="_blank" rel="noopener noreferrer" sx={footerLinkSx}>Book Classes</Link>
+                            <Link component={RouterLink} to="/#instructors" sx={footerLinkSx}>Our Instructors</Link>
+                            <Link component={RouterLink} to="/contact" sx={footerLinkSx}>Contact Us</Link>
+                            <Link component={RouterLink} to="/faq" sx={footerLinkSx}>FAQ</Link>
                         </Box>
                     </Grid>
 
@@ -87,7 +84,7 @@ const Footer = () => {
                             Phone: [PHONE_NUMBER]
                         </Typography>
                         <Typography variant="caption" sx={{ color: 'rgba(255, 255, 255, 0.75)', display: 'block', lineHeight: 1.5 }}>
-                            For questions, date swaps, time changes, extra info, or payment transfers, please contact Bookeo support directly.
+                            For questions, date swaps, time changes, extra info, or payment transfers, please contact me.
                         </Typography>
                     </Grid>
                 </Grid>
