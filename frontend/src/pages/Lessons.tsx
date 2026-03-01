@@ -1,9 +1,10 @@
-import { Container, Typography, Box, Grid, Paper, Button, List, ListItem, ListItemIcon, ListItemText, Divider } from '@mui/material';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import StarIcon from '@mui/icons-material/Star';
-import GroupsIcon from '@mui/icons-material/Groups';
+import { Container, Typography, Box, Grid, Paper, Button, List, ListItem, ListItemIcon, ListItemText, Stack } from '@mui/material';
 import PersonIcon from '@mui/icons-material/Person';
+import PoolIcon from '@mui/icons-material/Pool';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { styled } from '@mui/material/styles';
+import lessonsTemp from '../assets/lessonsTemp.jpg';
 
 const PageHeader = styled(Box)(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
@@ -20,7 +21,7 @@ const PriceTag = styled(Typography)(({ theme }) => ({
 }));
 
 const CourseCard = styled(Paper)(({ theme }) => ({
-    padding: theme.spacing(4),
+    padding: theme.spacing(5),
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
@@ -31,6 +32,215 @@ const CourseCard = styled(Paper)(({ theme }) => ({
         boxShadow: theme.shadows[4],
     },
 }));
+
+const LessonTypesSection = () => {
+    return (
+        <>
+            <Typography variant="h3" component="h2" fontWeight="bold" color="primary.main" gutterBottom sx={{ mb: 3 }}>
+                Lesson Types
+            </Typography>
+            <Grid container spacing={4}>
+                    {/* Private */}
+                    <Grid size={{ xs: 12, md: 4 }}>
+                        <CourseCard
+                            elevation={3}
+                            sx={{
+                                border: '2px solid',
+                                borderColor: 'secondary.light',
+                            }}
+                        >
+                            <Box
+                                sx={{
+                                    position: 'absolute',
+                                    top: 16,
+                                    right: 16,
+                                    bgcolor: 'secondary.main',
+                                    color: 'common.white',
+                                    px: 1.5,
+                                    py: 0.5,
+                                    borderRadius: 10,
+                                    fontSize: '0.75rem',
+                                    fontWeight: 700,
+                                    letterSpacing: '0.06em',
+                                    textTransform: 'uppercase',
+                                }}
+                            >
+                                Most popular
+                            </Box>
+                            <Box display="flex" alignItems="center" gap={2} mb={2}>
+                                <PersonIcon color="primary" fontSize="large" />
+                                <Typography variant="h5" component="h2" fontWeight="bold">
+                                    Private
+                                </Typography>
+                            </Box>
+                            <PriceTag variant="h5">
+                                $55 · 30 min &nbsp;|&nbsp; $95 · 1 hr
+                            </PriceTag>
+                            <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+                                1–2 students (same client). Students must be age 6+. Lessons taught at our pool.
+                            </Typography>
+                            <List dense disablePadding sx={{ mb: 2 }}>
+                                <ListItem disablePadding sx={{ mb: 1 }}>
+                                    <ListItemIcon sx={{ minWidth: 28 }}>
+                                        <CheckCircleIcon color="secondary" fontSize="small" />
+                                    </ListItemIcon>
+                                    <ListItemText primary="Request level you want us to teach. Supports an adaptable teaching style"/>
+                                </ListItem>
+                                <ListItem disablePadding sx={{ mb: 1 }}>
+                                    <ListItemIcon sx={{ minWidth: 28 }}>
+                                        <CheckCircleIcon color="secondary" fontSize="small" />
+                                    </ListItemIcon>
+                                    <ListItemText primary="Supports spot or scheduled booking"/>
+                                </ListItem>
+                                <ListItem disablePadding>
+                                    <ListItemIcon sx={{ minWidth: 28 }}>
+                                        <CheckCircleIcon color="secondary" fontSize="small" />
+                                    </ListItemIcon>
+                                    <ListItemText primary="$20 per additional student (per class)"/>
+                                </ListItem>
+                            </List>
+                            <Button variant="contained" size="large" fullWidth sx={{ mt: 'auto' }} component="a" href="https://bookeo.com/testing123" target="_blank" rel="noopener noreferrer">
+                                Book Now
+                            </Button>
+                        </CourseCard>
+                    </Grid>
+
+                    {/* Travel */}
+                    <Grid size={{ xs: 12, md: 4 }}>
+                        <CourseCard elevation={2}>
+                            <Box display="flex" alignItems="center" gap={2} mb={2}>
+                                <LocationOnIcon color="primary" fontSize="large" />
+                                <Typography variant="h5" component="h2" fontWeight="bold">
+                                    Travel
+                                </Typography>
+                            </Box>
+                            <PriceTag variant="h5">
+                                $90 · 45 min &nbsp;|&nbsp; $110 · 1 hr
+                            </PriceTag>
+                            <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+                                We come to teach at your pool. Students must be age 6+.
+                            </Typography>
+                            <List dense disablePadding sx={{ mb: 2 }}>
+                                <ListItem disablePadding sx={{ mb: 1 }}>
+                                    <ListItemIcon sx={{ minWidth: 28 }}>
+                                        <CheckCircleIcon color="secondary" fontSize="small" />
+                                    </ListItemIcon>
+                                    <ListItemText primary="Request the level you want us to teach. Supports an adaptable teaching style" />
+                                </ListItem>
+                                <ListItem disablePadding sx={{ mb: 1 }}>
+                                    <ListItemIcon sx={{ minWidth: 28 }}>
+                                        <CheckCircleIcon color="secondary" fontSize="small" />
+                                    </ListItemIcon>
+                                    <ListItemText primary="Supports spot or scheduled booking"/>
+                                </ListItem>
+                                <ListItem disablePadding>
+                                    <ListItemIcon sx={{ minWidth: 28 }}>
+                                        <CheckCircleIcon color="secondary" fontSize="small" />
+                                    </ListItemIcon>
+                                    <ListItemText primary="$20 per additional student (per class)"/>
+                                </ListItem>
+                            </List>
+                            <Button variant="contained" size="large" fullWidth sx={{ mt: 'auto' }} component="a" href="https://bookeo.com/testing123" target="_blank" rel="noopener noreferrer">
+                                Book Now
+                            </Button>
+                        </CourseCard>
+                    </Grid>
+
+                    {/* Renting */}
+                    <Grid size={{ xs: 12, md: 4 }}>
+                        <CourseCard elevation={2}>
+                            <Box display="flex" alignItems="center" gap={2} mb={2}>
+                                <PoolIcon color="primary" fontSize="large" />
+                                <Typography variant="h5" component="h2" fontWeight="bold">
+                                    Renting Pool
+                                </Typography>
+                            </Box>
+                            <PriceTag variant="h5">
+                                $70/hr + $30/hr guard
+                            </PriceTag>
+                            <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+                                Rent our pool. Minimum 1 hour.
+                            </Typography>
+                            <List dense disablePadding sx={{ mb: 2 }}>
+                                <ListItem disablePadding sx={{ mb: 1 }}>
+                                    <ListItemIcon sx={{ minWidth: 28 }}>
+                                        <CheckCircleIcon color="secondary" fontSize="small" />
+                                    </ListItemIcon>
+                                    <ListItemText primary="1 guard, up to 10 people in the pool at a time" />
+                                </ListItem>
+                                <ListItem disablePadding>
+                                    <ListItemIcon sx={{ minWidth: 28 }}>
+                                        <CheckCircleIcon color="secondary" fontSize="small" />
+                                    </ListItemIcon>
+                                    <ListItemText primary="Swimmers must be age 6+" />
+                                </ListItem>
+                            </List>
+                            <Button variant="contained" size="large" fullWidth sx={{ mt: 'auto' }} component="a" href="https://bookeo.com/testing123" target="_blank" rel="noopener noreferrer">
+                                Book Now
+                            </Button>
+                        </CourseCard>
+                    </Grid>
+                </Grid>
+        </>
+    );
+};
+
+const BundlesSection = () => {
+    return (
+        <Grid container spacing={5} sx={{ mt: 10 }} alignItems="flex-start">
+            <Grid size={{ xs: 12, md: 6 }}>
+                <Typography variant="h3" component="h2" fontWeight="bold" gutterBottom color="primary.main" sx={{ mb: 2 }}>
+                    Bundles & Deals
+                </Typography>
+                <Typography variant="body1" color="text.secondary" paragraph>
+                    We offer bundle options for any class type &ndash; private, travel, or renting. Bundles work best if you want a recurring class schedule.
+                </Typography>
+                <Stack spacing={2} sx={{ mt: 2 }}>
+                    <Box display="flex" alignItems="flex-start" gap={2}>
+                        <CheckCircleIcon color="secondary" fontSize="large" sx={{ mt: 0.5 }} />
+                        <Box>
+                            <Typography variant="subtitle1" fontWeight="bold">8-Class Bundle</Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                Twice a week for 4 weeks (8 classes total). Great for building momentum and fast progress.
+                            </Typography>
+                        </Box>
+                    </Box>
+                    <Box display="flex" alignItems="flex-start" gap={2}>
+                        <CheckCircleIcon color="secondary" fontSize="large" sx={{ mt: 0.5 }} />
+                        <Box>
+                            <Typography variant="subtitle1" fontWeight="bold">6-Class Bundle</Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                Once a week for 6 weeks (6 classes total). A steady pace that fits busy schedules.
+                            </Typography>
+                        </Box>
+                    </Box>
+                    <Box display="flex" alignItems="flex-start" gap={2}>
+                        <CheckCircleIcon color="secondary" fontSize="large" sx={{ mt: 0.5 }} />
+                        <Box>
+                            <Typography variant="subtitle1" fontWeight="bold">Extra Value &amp; Flexibility</Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                Book 6+ recurring classes and get one class free. If our recurring slots don&apos;t fit, call us to arrange a flexible schedule.
+                            </Typography>
+                        </Box>
+                    </Box>
+                </Stack>
+            </Grid>
+            <Grid size={{ xs: 12, md: 6 }}>
+                <Box
+                    component="img"
+                    src={lessonsTemp}
+                    alt="Swimming lessons"
+                    sx={{
+                        width: '100%',
+                        objectFit: 'cover',
+                        aspectRatio: '4/3',
+                        borderRadius: 2,
+                    }}
+                />
+            </Grid>
+        </Grid>
+    );
+};
 
 const Lessons = () => {
     return (
@@ -47,122 +257,8 @@ const Lessons = () => {
             </PageHeader>
 
             <Container maxWidth="lg">
-                <Grid container spacing={6}>
-                    {/* Spot Private Bookings */}
-                    <Grid size={{ xs: 12, md: 6 }}>
-                        <CourseCard elevation={2}>
-                            <Box display="flex" alignItems="center" gap={2} mb={2}>
-                                <PersonIcon color="primary" fontSize="large" />
-                                <Typography variant="h4" component="h2" fontWeight="bold">
-                                    Spot Private Bookings
-                                </Typography>
-                            </Box>
-
-                            <PriceTag variant="h5">
-                                $60 / 30-min session
-                            </PriceTag>
-
-                            <Typography variant="body1" paragraph color="text.secondary" sx={{ mb: 4 }}>
-                                Flexible, one-on-one instruction tailored completely to your needs. Perfect for busy schedules or focusing on specific skills.
-                            </Typography>
-
-                            <Divider sx={{ mb: 3 }} />
-
-                            <Typography variant="h6" gutterBottom fontWeight="bold">
-                                Perfect For:
-                            </Typography>
-                            <List sx={{ mb: 'auto' }}>
-                                <ListItem disablePadding sx={{ mb: 1.5 }}>
-                                    <ListItemIcon sx={{ minWidth: 36 }}>
-                                        <CheckCircleIcon color="secondary" fontSize="small" />
-                                    </ListItemIcon>
-                                    <ListItemText primary="Refining specific strokes or techniques" />
-                                </ListItem>
-                                <ListItem disablePadding sx={{ mb: 1.5 }}>
-                                    <ListItemIcon sx={{ minWidth: 36 }}>
-                                        <CheckCircleIcon color="secondary" fontSize="small" />
-                                    </ListItemIcon>
-                                    <ListItemText primary="Overcoming fear of water" />
-                                </ListItem>
-                                <ListItem disablePadding sx={{ mb: 1.5 }}>
-                                    <ListItemIcon sx={{ minWidth: 36 }}>
-                                        <CheckCircleIcon color="secondary" fontSize="small" />
-                                    </ListItemIcon>
-                                    <ListItemText primary="Flexible scheduling (week-to-week)" />
-                                </ListItem>
-                                <ListItem disablePadding sx={{ mb: 1.5 }}>
-                                    <ListItemIcon sx={{ minWidth: 36 }}>
-                                        <CheckCircleIcon color="secondary" fontSize="small" />
-                                    </ListItemIcon>
-                                    <ListItemText primary="Adult learners wanting private space" />
-                                </ListItem>
-                            </List>
-
-                            <Button variant="contained" size="large" fullWidth sx={{ mt: 4 }}>
-                                Book a Spot Session
-                            </Button>
-                        </CourseCard>
-                    </Grid>
-
-                    {/* Small Group Courses */}
-                    <Grid size={{ xs: 12, md: 6 }}>
-                        <CourseCard elevation={2} sx={{ border: '2px solid', borderColor: 'secondary.light' }}>
-                            <Box sx={{ position: 'absolute', top: 16, right: 16, bgcolor: 'secondary.main', color: 'white', px: 2, py: 0.5, borderRadius: 4, fontWeight: 'bold', fontSize: '0.875rem' }}>
-                                POPULAR
-                            </Box>
-                            <Box display="flex" alignItems="center" gap={2} mb={2}>
-                                <GroupsIcon color="primary" fontSize="large" />
-                                <Typography variant="h4" component="h2" fontWeight="bold">
-                                    Small Group Courses
-                                </Typography>
-                            </Box>
-
-                            <PriceTag variant="h5">
-                                $200 / 6-week module
-                            </PriceTag>
-
-                            <Typography variant="body1" paragraph color="text.secondary" sx={{ mb: 4 }}>
-                                Structured curriculum in a social setting. Small groups ensure quality attention while students learn from watching peers.
-                            </Typography>
-
-                            <Divider sx={{ mb: 3 }} />
-
-                            <Typography variant="h6" gutterBottom fontWeight="bold">
-                                Course Highlights:
-                            </Typography>
-                            <List sx={{ mb: 'auto' }}>
-                                <ListItem disablePadding sx={{ mb: 1.5 }}>
-                                    <ListItemIcon sx={{ minWidth: 36 }}>
-                                        <StarIcon color="secondary" fontSize="small" />
-                                    </ListItemIcon>
-                                    <ListItemText primary="Consistent weekly progress" />
-                                </ListItem>
-                                <ListItem disablePadding sx={{ mb: 1.5 }}>
-                                    <ListItemIcon sx={{ minWidth: 36 }}>
-                                        <StarIcon color="secondary" fontSize="small" />
-                                    </ListItemIcon>
-                                    <ListItemText primary="Small class sizes (Max 3 students)" />
-                                </ListItem>
-                                <ListItem disablePadding sx={{ mb: 1.5 }}>
-                                    <ListItemIcon sx={{ minWidth: 36 }}>
-                                        <StarIcon color="secondary" fontSize="small" />
-                                    </ListItemIcon>
-                                    <ListItemText primary=" structured curriculum levels" />
-                                </ListItem>
-                                <ListItem disablePadding sx={{ mb: 1.5 }}>
-                                    <ListItemIcon sx={{ minWidth: 36 }}>
-                                        <StarIcon color="secondary" fontSize="small" />
-                                    </ListItemIcon>
-                                    <ListItemText primary="End-of-course certificate" />
-                                </ListItem>
-                            </List>
-
-                            <Button variant="contained" color="secondary" size="large" fullWidth sx={{ mt: 4 }}>
-                                View Course Schedule
-                            </Button>
-                        </CourseCard>
-                    </Grid>
-                </Grid>
+                <LessonTypesSection />
+                <BundlesSection />
             </Container>
         </Box>
     );

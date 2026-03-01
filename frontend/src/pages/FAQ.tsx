@@ -25,7 +25,7 @@ const faqs = [
     },
     {
         question: 'How do I book or reschedule a lesson?',
-        answer: 'You can book and manage lessons through our online scheduling system on the Pricing page. For reschedules or cancellations, please do so at least 24 hours in advance when possible.',
+        answer: 'You can book and manage lessons through our online scheduling system on the Lessons page. For reschedules or cancellations, please do so at least 24 hours in advance when possible.',
     },
     {
         question: 'What is your cancellation policy?',

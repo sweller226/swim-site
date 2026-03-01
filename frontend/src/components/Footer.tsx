@@ -49,7 +49,7 @@ const Footer = () => {
             <Container maxWidth="lg">
                 <Grid container spacing={6}>
                     <Grid size={{ xs: 12, md: 4 }}>
-                        <Typography component="h2" sx={footerHeadingSx}>Swim School</Typography>
+                        <Typography component="h2" sx={footerHeadingSx}>Dave's Swim School</Typography>
                         <Typography variant="body2" sx={{ color: 'rgba(255, 255, 255, 0.85)', mb: 3, maxWidth: 300, lineHeight: 1.6 }}>
                             Building confidence in the water. We provide a safe, fun, and encouraging environment for swimmers of all ages.
                         </Typography>

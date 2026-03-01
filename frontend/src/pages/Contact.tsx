@@ -1,8 +1,9 @@
-import { Container, Typography, Box, Grid, Paper } from '@mui/material';
+import { Container, Typography, Box, Grid } from '@mui/material';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import { styled } from '@mui/material/styles';
+import placeholder from '../assets/placeholder.jpg';
 
 const PageHeader = styled(Box)(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
@@ -10,15 +11,6 @@ const PageHeader = styled(Box)(({ theme }) => ({
     padding: theme.spacing(10, 0, 6, 0),
     marginBottom: theme.spacing(6),
     textAlign: 'center',
-}));
-
-const InfoCard = styled(Paper)(({ theme }) => ({
-    padding: theme.spacing(4),
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    gap: theme.spacing(2),
 }));
 
 const Contact = () => {
@@ -36,48 +28,78 @@ const Contact = () => {
             </PageHeader>
 
             <Container maxWidth="lg">
-                <Grid container spacing={4}>
-                    <Grid size={{ xs: 12, md: 4 }}>
-                        <InfoCard elevation={2}>
-                            <LocationOnIcon color="primary" sx={{ fontSize: 40 }} />
-                            <Typography variant="h6" fontWeight="bold" color="text.primary">
-                                Address
-                            </Typography>
-                            <Typography variant="body1" color="text.secondary" sx={{ lineHeight: 1.6 }}>
-                                123 Swim Lane<br />
-                                Water City, ST 12345
-                            </Typography>
-                        </InfoCard>
+                <Grid container spacing={5} alignItems="flex-start" sx={{ mt: 6 }}>
+                    <Grid size={{ xs: 12, md: 6 }}>
+                        <Typography variant="h3" sx={{ display: 'block', mb: 2, color: 'primary.main' }}>
+                            For any questions or issues
+                        </Typography>
+                        <Typography variant="body1" color="text.secondary" sx={{ lineHeight: 1.7, mb: 3 }}>
+                            Please contact us directly
+                            by email or phone. We&apos;re happy to help you adjust your schedule or answer any other questions about lessons.
+                        </Typography>
+                        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+                            <Box display="flex" alignItems="flex-start" gap={2}>
+                                <LocationOnIcon color="primary" sx={{ fontSize: 40, mt: 0.5 }} />
+                                <Box>
+                                    <Typography variant="h6" fontWeight="bold" color="text.primary">
+                                        Address
+                                    </Typography>
+                                    <Typography variant="body1" color="text.secondary" sx={{ lineHeight: 1.6 }}>
+                                        123 Swim Lane<br />
+                                        Water City, ST 12345
+                                    </Typography>
+                                </Box>
+                            </Box>
+                            <Box display="flex" alignItems="flex-start" gap={2}>
+                                <EmailIcon color="primary" sx={{ fontSize: 40, mt: 0.5 }} />
+                                <Box>
+                                    <Typography variant="h6" fontWeight="bold" color="text.primary">
+                                        Email
+                                    </Typography>
+                                    <Typography
+                                        variant="body1"
+                                        color="text.secondary"
+                                        component="a"
+                                        href="mailto:[EMAIL_ADDRESS]"
+                                        sx={{ lineHeight: 1.6, color: 'primary.main', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}
+                                    >
+                                        [EMAIL_ADDRESS]
+                                    </Typography>
+                                </Box>
+                            </Box>
+                            <Box display="flex" alignItems="flex-start" gap={2}>
+                                <PhoneIcon color="primary" sx={{ fontSize: 40, mt: 0.5 }} />
+                                <Box>
+                                    <Typography variant="h6" fontWeight="bold" color="text.primary">
+                                        Phone
+                                    </Typography>
+                                    <Typography
+                                        variant="body1"
+                                        color="text.secondary"
+                                        component="a"
+                                        href="tel:[PHONE_NUMBER]"
+                                        sx={{ lineHeight: 1.6, color: 'inherit', textDecoration: 'none', '&:hover': { color: 'primary.main' } }}
+                                    >
+                                        [PHONE_NUMBER]
+                                    </Typography>
+                                </Box>
+                            </Box>
+                        </Box>
                     </Grid>
-                    <Grid size={{ xs: 12, md: 4 }}>
-                        <InfoCard elevation={2}>
-                            <EmailIcon color="primary" sx={{ fontSize: 40 }} />
-                            <Typography variant="h6" fontWeight="bold" color="text.primary">
-                                Email
-                            </Typography>
-                            <Typography variant="body1" color="text.secondary" component="a" href="mailto:[EMAIL_ADDRESS]" sx={{ lineHeight: 1.6, color: 'primary.main', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>
-                                [EMAIL_ADDRESS]
-                            </Typography>
-                        </InfoCard>
-                    </Grid>
-                    <Grid size={{ xs: 12, md: 4 }}>
-                        <InfoCard elevation={2}>
-                            <PhoneIcon color="primary" sx={{ fontSize: 40 }} />
-                            <Typography variant="h6" fontWeight="bold" color="text.primary">
-                                Phone
-                            </Typography>
-                            <Typography variant="body1" color="text.secondary" component="a" href="tel:[PHONE_NUMBER]" sx={{ lineHeight: 1.6, color: 'inherit', textDecoration: 'none', '&:hover': { color: 'primary.main' } }}>
-                                [PHONE_NUMBER]
-                            </Typography>
-                        </InfoCard>
+                    <Grid size={{ xs: 12, md: 6 }}>
+                        <Box
+                            component="img"
+                            src={placeholder}
+                            alt="Pool and lessons"
+                            sx={{
+                                width: '100%',
+                                objectFit: 'cover',
+                                aspectRatio: '4/3',
+                                borderRadius: 2,
+                            }}
+                        />
                     </Grid>
                 </Grid>
-
-                <Box sx={{ mt: 6, p: 3, bgcolor: 'background.default', borderRadius: 2, textAlign: 'center' }}>
-                    <Typography variant="body1" color="text.secondary" sx={{ lineHeight: 1.7, maxWidth: 560, mx: 'auto' }}>
-                        For questions about booking, date swaps, time changes, or payment transfers, please contact Bookeo support directly through your booking confirmation.
-                    </Typography>
-                </Box>
             </Container>
         </Box>
     );

@@ -18,12 +18,11 @@ const ImagePlaceholder = styled(Box)(({ theme }) => ({
 
 interface InstructorProps {
     name: string;
-    experience: string;
     specialties: string[];
     bio: string;
 }
 
-const InstructorCard = ({ name, experience, specialties, bio }: InstructorProps) => {
+const InstructorCard = ({ name, bio }: InstructorProps) => {
     return (
         <StyledCard>
             <ImagePlaceholder>
@@ -35,19 +34,6 @@ const InstructorCard = ({ name, experience, specialties, bio }: InstructorProps)
                 <Typography variant="h5" component="h2" gutterBottom fontWeight="bold">
                     {name}
                 </Typography>
-
-                <Box display="flex" alignItems="center" gap={1} mb={2}>
-                    <WorkspacePremiumIcon color="secondary" />
-                    <Typography variant="subtitle2" color="secondary.main" fontWeight="bold">
-                        {experience} Experience
-                    </Typography>
-                </Box>
-
-                <Stack direction="row" spacing={1} mb={2} flexWrap="wrap" useFlexGap>
-                    {specialties.map((spec) => (
-                        <Chip key={spec} label={spec} size="small" variant="outlined" />
-                    ))}
-                </Stack>
 
                 <Typography variant="body2" color="text.secondary">
                     {bio}

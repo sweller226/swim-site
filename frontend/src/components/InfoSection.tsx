@@ -1,16 +1,8 @@
-import { Box, Container, Typography, Grid, Paper, Button, Stack } from '@mui/material';
-import { styled } from '@mui/material/styles';
+import { Box, Container, Typography, Grid, Button, Stack } from '@mui/material';
 import { Link } from 'react-router-dom';
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import PersonIcon from '@mui/icons-material/Person';
 import PoolIcon from '@mui/icons-material/Pool';
-import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
-
-const LessonTypesCard = styled(Paper)(({ theme }) => ({
-    padding: theme.spacing(4),
-    borderRadius: theme.spacing(4),
-    backgroundColor: 'white',
-    height: '100%',
-}));
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 const InfoSection = () => {
     return (
@@ -19,47 +11,80 @@ const InfoSection = () => {
                 <Grid container spacing={6}>
                     <Grid size={{ xs: 12, md: 6 }}>
                         <Typography variant="h3" gutterBottom fontWeight="bold" color="primary.main">
-                            How It Works
+                            What We Offer
                         </Typography>
                         <Typography variant="body1" paragraph>
-                            We've made booking your swim lessons as easy as possible. Our real-time scheduling system allows you to:
+                            From private instruction at our pool to lessons at yours—we provide flexible options to fit your schedule and goals.
                         </Typography>
                         <Stack spacing={2} sx={{ mb: 4 }}>
-                            <Box display="flex" alignItems="center" gap={2}>
-                                <CalendarMonthIcon color="primary" fontSize="large" />
-                                <Typography variant="body1">View live availability for all instructors.</Typography>
+                            <Box display="flex" alignItems="flex-start" gap={2}>
+                                <PersonIcon color="primary" fontSize="large" sx={{ mt: 0.5 }} />
+                                <Box>
+                                    <Typography variant="subtitle1" fontWeight="bold">Private Classes</Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        30-min or 1hr sessions for 1–2 students. Choose your level, book spot or scheduled. Add an additional student for a small fee.
+                                    </Typography>
+                                </Box>
                             </Box>
-                            <Box display="flex" alignItems="center" gap={2}>
-                                <PoolIcon color="primary" fontSize="large" />
-                                <Typography variant="body1">Select from flexible spot bookings or structured courses.</Typography>
+                            <Box display="flex" alignItems="flex-start" gap={2}>
+                                <LocationOnIcon color="primary" fontSize="large" sx={{ mt: 0.5 }} />
+                                <Box>
+                                    <Typography variant="subtitle1" fontWeight="bold">Travel to You</Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        We come to your pool—45 min or 1hr. Ideal if you have a pool at home and want instruction on your schedule.
+                                    </Typography>
+                                </Box>
                             </Box>
-                            <Box display="flex" alignItems="center" gap={2}>
-                                <EmojiEventsIcon color="primary" fontSize="large" />
-                                <Typography variant="body1">Track progress and manage bookings online.</Typography>
+                            <Box display="flex" alignItems="flex-start" gap={2}>
+                                <PoolIcon color="primary" fontSize="large" sx={{ mt: 0.5 }} />
+                                <Box>
+                                    <Typography variant="subtitle1" fontWeight="bold">Pool Rental</Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        Rent our pool by the hour. One guard, up to 10 people in the pool at a time. Perfect for parties, practice, or gatherings.
+                                    </Typography>
+                                </Box>
                             </Box>
                         </Stack>
                         <Button variant="contained" color="primary" size="large" component={Link} to="/lessons">
-                            Learn More About Lessons
+                            View Lessons &amp; Pricing
                         </Button>
                     </Grid>
                     <Grid size={{ xs: 12, md: 6 }}>
-                        <LessonTypesCard>
-                            <Typography variant="h5" gutterBottom fontWeight="bold">
-                                Lesson Types
-                            </Typography>
-                            <Box sx={{ mb: 3, mt: 3}}>
-                                <Typography variant="h6" color="primary">Spot Private Bookings</Typography>
-                                <Typography variant="body2" color="text.secondary">
-                                    Flexible one-on-one sessions tailored to your specific needs. Perfect for technique refinement or extra practice whenever you need it.
-                                </Typography>
+                        <Typography variant="h3" gutterBottom fontWeight="bold" color="primary.main">
+                            How It Works
+                        </Typography>
+                        <Typography variant="body1" paragraph>
+                            Simple, clear lessons in a comfortable backyard setting, led by experienced instructors and booked online.
+                        </Typography>
+                        <Stack spacing={2}>
+                            <Box display="flex" alignItems="flex-start" gap={2}>
+                                <PoolIcon color="primary" fontSize="large" sx={{ mt: 0.5 }} />
+                                <Box>
+                                    <Typography variant="subtitle1" fontWeight="bold">Well-Maintained Backyard Pool</Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        Lessons run in a clean, well-maintained backyard pool that&apos;s kept comfortable for swimmers of all ages.
+                                    </Typography>
+                                </Box>
                             </Box>
-                            <Box sx={{ mb: 3 }}>
-                                <Typography variant="h6" color="primary">Small Group Courses</Typography>
-                                <Typography variant="body2" color="text.secondary">
-                                    Structured 4-6 week courses for small groups (2-3 students). Ideal for consistent progress and learning alongside peers.
-                                </Typography>
+                            <Box display="flex" alignItems="flex-start" gap={2}>
+                                <PersonIcon color="primary" fontSize="large" sx={{ mt: 0.5 }} />
+                                <Box>
+                                    <Typography variant="subtitle1" fontWeight="bold">Experienced Instructors</Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        Every instructor has at least 2 years of experience working in the City, with a strong focus on safety and progress.
+                                    </Typography>
+                                </Box>
                             </Box>
-                        </LessonTypesCard>
+                            <Box display="flex" alignItems="flex-start" gap={2}>
+                                <LocationOnIcon color="primary" fontSize="large" sx={{ mt: 0.5 }} />
+                                <Box>
+                                    <Typography variant="subtitle1" fontWeight="bold">Online Booking with Bookeo</Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        Booking is handled through our online system, Bookeo, where you can see available times and manage your schedule.
+                                    </Typography>
+                                </Box>
+                            </Box>
+                        </Stack>
                     </Grid>
                 </Grid>
             </Container>

@@ -26,7 +26,7 @@ const Header = () => {
                             flexGrow: 1,
                         }}
                     >
-                        SWIM SCHOOL
+                        DAVE'S SWIM SCHOOL
                     </Typography>
 
                     <Box sx={{ display: 'flex', gap: 2 }}>
@@ -34,7 +34,7 @@ const Header = () => {
                             Home
                         </Button>
                         <Button color={location.pathname === '/lessons' ? 'primary' : 'inherit'} component={Link} to="/lessons">
-                            Pricing
+                            Lessons
                         </Button>
                         <Button color={location.pathname === '/faq' ? 'primary' : 'inherit'} component={Link} to="/faq">
                             FAQ
