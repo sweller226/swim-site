@@ -6,9 +6,9 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 const InfoSection = () => {
     return (
-        <Box sx={{ py: 6, bgcolor: 'background.default' }}>
+        <Box sx={{ py: { xs: 4, md: 6 }, bgcolor: 'background.default' }}>
             <Container maxWidth="lg">
-                <Grid container spacing={6}>
+                <Grid container spacing={{ xs: 4, md: 6 }}>
                     <Grid size={{ xs: 12, md: 6 }}>
                         <Typography variant="h3" gutterBottom fontWeight="bold" color="primary.main">
                             What We Offer

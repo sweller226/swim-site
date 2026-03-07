@@ -17,7 +17,7 @@ const PageHeader = styled(Box)(({ theme }) => ({
 const faqs = [
     {
         question: 'What ages do you teach?',
-        answer: 'We offer lessons for all ages, from toddlers (with parent in the water) through adults. Our instructors tailor the approach to each swimmer\'s age and comfort level.',
+        answer: 'We offer private classes and pool rental for swimmers ages 6 and up, and any age group for travel lessons. Our instructors tailor the approach to each swimmer\'s age and comfort level.',
     },
     {
         question: 'Do I need to bring anything?',
@@ -29,15 +29,15 @@ const faqs = [
     },
     {
         question: 'What is your cancellation policy?',
-        answer: 'We ask for at least 24 hours notice for cancellations or reschedules. Late cancellations may be subject to a fee. For questions about specific bookings, contact Bookeo support.',
+        answer: 'We ask for at least 24 hours notice for cancellations or reschedules. For questions about specific bookings, contact us directly.',
     },
     {
         question: 'Where are lessons held?',
-        answer: 'Lessons take place at our pool facility. The exact address and any access details will be confirmed when you book.',
+        answer: 'Lessons take place at our pool facility. The exact address is _______. Access details will be confirmed when you book. If you have a pool at home, we can come to you for travel lessons.',
     },
     {
         question: 'Are your instructors certified?',
-        answer: 'Yes. Our instructors are experienced, certified, and fully insured. We prioritize safety and a positive, encouraging environment in every lesson.',
+        answer: 'Yes. Our instructors are experienced workers with the City of Toronto or Vaughan Parks and Recreation. All instructors are certified through the Lifesaving Society.',
     },
 ];
 
@@ -62,7 +62,7 @@ const FAQ = () => {
             </PageHeader>
 
             <Container maxWidth="lg">
-                <Grid container spacing={6}>
+                <Grid container spacing={{ xs: 4, md: 6 }}>
                     <Grid size={{ xs: 12, md: 7 }}>
                         <Box
                             sx={{
@@ -99,14 +99,15 @@ const FAQ = () => {
                         </Box>
                     </Grid>
 
-                    <Grid size={{ xs: 12, md: 5 }}>
+                    <Grid size={{ xs: 12, md: 5 }} sx={{ display: { xs: 'none', md: 'block' } }}>
                         <Box
                             sx={{
-                                position: 'sticky',
+                                position: { xs: 'static', md: 'sticky' },
                                 top: 100,
                                 display: 'flex',
                                 flexDirection: 'column',
                                 gap: 2,
+                                mt: { xs: 4, md: 0 },
                             }}
                         >
                             <Box

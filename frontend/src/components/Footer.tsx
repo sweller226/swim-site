@@ -7,8 +7,12 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 const FooterContainer = styled('footer')(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
     color: 'rgba(255, 255, 255, 0.95)',
-    paddingTop: theme.spacing(8),
+    paddingTop: theme.spacing(6),
     paddingBottom: theme.spacing(4),
+    [theme.breakpoints.up('md')]: {
+        paddingTop: theme.spacing(8),
+        paddingBottom: theme.spacing(5),
+    },
     marginTop: 'auto',
 }));
 
@@ -47,7 +51,7 @@ const Footer = () => {
     return (
         <FooterContainer>
             <Container maxWidth="lg">
-                <Grid container spacing={6}>
+                <Grid container spacing={{ xs: 4, md: 6 }}>
                     <Grid size={{ xs: 12, md: 4 }}>
                         <Typography component="h2" sx={footerHeadingSx}>Dave's Swim School</Typography>
                         <Typography variant="body2" sx={{ color: 'rgba(255, 255, 255, 0.85)', mb: 3, maxWidth: 300, lineHeight: 1.6 }}>

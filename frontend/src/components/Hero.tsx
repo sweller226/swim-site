@@ -11,7 +11,10 @@ const HeroSection = styled(Box)(({ theme }) => ({
     backgroundImage: `url(${heroBg})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    minHeight: '600px',
+    minHeight: '480px',
+    [theme.breakpoints.up('md')]: {
+        minHeight: '600px',
+    },
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'stretch',

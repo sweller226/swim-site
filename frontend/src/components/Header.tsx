@@ -29,7 +29,14 @@ const Header = () => {
                         DAVE'S SWIM SCHOOL
                     </Typography>
 
-                    <Box sx={{ display: 'flex', gap: 2 }}>
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            gap: { xs: 1, sm: 2 },
+                            flexWrap: 'wrap',
+                            justifyContent: { xs: 'flex-end', md: 'flex-end' },
+                        }}
+                    >
                         <Button color={location.pathname === '/' ? 'primary' : 'inherit'} component={Link} to="/">
                             Home
                         </Button>

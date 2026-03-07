@@ -36,10 +36,10 @@ const CourseCard = styled(Paper)(({ theme }) => ({
 const LessonTypesSection = () => {
     return (
         <>
-            <Typography variant="h3" component="h2" fontWeight="bold" color="primary.main" gutterBottom sx={{ mb: 3 }}>
+            <Typography variant="h3" component="h2" fontWeight="bold" color="primary.main" gutterBottom sx={{ mb: { xs: 2, md: 3 } }}>
                 Lesson Types
             </Typography>
-            <Grid container spacing={4}>
+            <Grid container spacing={{ xs: 3, md: 4 }}>
                     {/* Private */}
                     <Grid size={{ xs: 12, md: 4 }}>
                         <CourseCard
@@ -225,7 +225,7 @@ const BundlesSection = () => {
                     </Box>
                 </Stack>
             </Grid>
-            <Grid size={{ xs: 12, md: 6 }}>
+            <Grid size={{ xs: 12, md: 6 }} sx={{ display: { xs: 'none', md: 'block' } }}>
                 <Box
                     component="img"
                     src={lessonsTemp}

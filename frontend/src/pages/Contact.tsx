@@ -28,7 +28,7 @@ const Contact = () => {
             </PageHeader>
 
             <Container maxWidth="lg">
-                <Grid container spacing={5} alignItems="flex-start" sx={{ mt: 6 }}>
+                <Grid container spacing={{ xs: 4, md: 5 }} alignItems="flex-start" sx={{ mt: { xs: 4, md: 6 } }}>
                     <Grid size={{ xs: 12, md: 6 }}>
                         <Typography variant="h3" sx={{ display: 'block', mb: 2, color: 'primary.main' }}>
                             For any questions or issues
@@ -86,7 +86,7 @@ const Contact = () => {
                             </Box>
                         </Box>
                     </Grid>
-                    <Grid size={{ xs: 12, md: 6 }}>
+                    <Grid size={{ xs: 12, md: 6 }} sx={{ display: { xs: 'none', md: 'block' } }}>
                         <Box
                             component="img"
                             src={placeholder}
@@ -96,6 +96,7 @@ const Contact = () => {
                                 objectFit: 'cover',
                                 aspectRatio: '4/3',
                                 borderRadius: 2,
+                                mt: { xs: 4, md: 0 },
                             }}
                         />
                     </Grid>
