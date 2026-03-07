@@ -1,6 +1,5 @@
-import { Card, CardContent, Typography, Box, Chip, Stack } from '@mui/material';
+import { Card, CardContent, Typography, Box } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 
 const StyledCard = styled(Card)({
     height: '100%',
