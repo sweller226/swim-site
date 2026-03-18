@@ -1,6 +1,5 @@
 import { AppBar, Toolbar, Typography, Button, Box, Container } from '@mui/material';
 import { Link, useLocation } from 'react-router-dom';
-import PoolIcon from '@mui/icons-material/Pool';
 
 const Header = () => {
     const location = useLocation();
@@ -9,25 +8,42 @@ const Header = () => {
         <AppBar position="static" color="transparent" elevation={0} sx={{ bgcolor: 'white' }}>
             <Container maxWidth="lg">
                 <Toolbar disableGutters>
-                    <PoolIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, color: 'primary.main' }} />
-                    <Typography
-                        variant="h6"
-                        noWrap
+                    <Box
                         component={Link}
                         to="/"
                         sx={{
+                            display: 'flex',
+                            alignItems: 'center',
                             mr: 2,
-                            display: { xs: 'none', md: 'flex' },
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: 'inherit',
-                            textDecoration: 'none',
                             flexGrow: 1,
+                            textDecoration: 'none',
+                            color: 'inherit',
                         }}
                     >
-                        DAVE'S SWIM SCHOOL
-                    </Typography>
+                        <Box
+                            component="img"
+                            src="/Logo-Small.svg"
+                            alt="Dave's Swim School logo"
+                            sx={{
+                                height: 32,
+                                width: 'auto',
+                                display: 'block',
+                                mr: 1,
+                            }}
+                        />
+                        <Typography
+                        variant="h6"
+                        noWrap
+                        sx={{
+                            ml: 1,
+                            display: { xs: 'none', sm: 'flex' },
+                            fontWeight: 600,
+                            letterSpacing: '.08rem',
+                        }}
+                        >
+                        Dave's Swim School
+                        </Typography>
+                    </Box>
 
                     <Box
                         sx={{

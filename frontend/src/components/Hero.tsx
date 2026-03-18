@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles';
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import SchoolIcon from '@mui/icons-material/School';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import heroBg from '../assets/hero_background2.jpg';
+import heroBg from '../assets/hero_background4.jpg';
 
 const HeroSection = styled(Box)(({ theme }) => ({
     position: 'relative',
@@ -25,7 +25,7 @@ const HeroSection = styled(Box)(({ theme }) => ({
         left: 0,
         right: 0,
         bottom: 0,
-        background: 'linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 80%, rgba(255,255,255,0.2) 100%)',
+        background: 'linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.5) 60%, rgba(255,255,255,0.2) 100%)',
     }
 }));
 

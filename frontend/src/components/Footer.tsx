@@ -58,12 +58,26 @@ const Footer = () => {
                             Building confidence in the water. We provide a safe, fun, and encouraging environment for swimmers of all ages.
                         </Typography>
                         <Stack direction="row" spacing={1}>
-                            <SocialButton size="small" aria-label="facebook">
-                                <FacebookIcon />
-                            </SocialButton>
-                            <SocialButton size="small" aria-label="instagram">
-                                <InstagramIcon />
-                            </SocialButton>
+                            <Link
+                                href="https://www.facebook.com/daveswimschool"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                sx={{ lineHeight: 0 }}
+                            >
+                                <SocialButton size="small" aria-label="facebook">
+                                    <FacebookIcon />
+                                </SocialButton>
+                            </Link>
+                            <Link
+                                href="https://www.instagram.com/daveswimschool"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                sx={{ lineHeight: 0 }}
+                            >
+                                <SocialButton size="small" aria-label="instagram">
+                                    <InstagramIcon />
+                                </SocialButton>
+                            </Link>
                         </Stack>
                     </Grid>
 
@@ -72,7 +86,7 @@ const Footer = () => {
                         <Box>
                             <Link component={RouterLink} to="/" onClick={() => window.scrollTo(0, 0)} sx={footerLinkSx}>Home</Link>
                             <Link href="https://bookeo.com/testing123" target="_blank" rel="noopener noreferrer" sx={footerLinkSx}>Book Classes</Link>
-                            <Link component={RouterLink} to="/#instructors" sx={footerLinkSx}>Our Instructors</Link>
+                            {/* <Link component={RouterLink} to="/#instructors" sx={footerLinkSx}>Our Instructors</Link> */}
                             <Link component={RouterLink} to="/contact" sx={footerLinkSx}>Contact Us</Link>
                             <Link component={RouterLink} to="/faq" sx={footerLinkSx}>FAQ</Link>
                         </Box>
@@ -84,8 +98,8 @@ const Footer = () => {
                             123 Swim Lane, Water City, ST 12345
                         </Typography>
                         <Typography variant="body2" sx={{ color: 'rgba(255, 255, 255, 0.85)', mb: 5, lineHeight: 1.6 }}>
-                            Email: [EMAIL_ADDRESS]<br />
-                            Phone: [PHONE_NUMBER]
+                            Email: contact@daveswimschool.ca<br />
+                            Phone: 647 746-4644
                         </Typography>
                         <Typography variant="caption" sx={{ color: 'rgba(255, 255, 255, 0.75)', display: 'block', lineHeight: 1.5 }}>
                             For questions, date swaps, time changes, extra info, or payment transfers, please contact me.

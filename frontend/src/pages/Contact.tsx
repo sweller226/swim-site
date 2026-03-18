@@ -3,7 +3,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import { styled } from '@mui/material/styles';
-import placeholder from '../assets/placeholder.jpg';
+import logoBig from '../assets/Logo-Big.png';
 
 const PageHeader = styled(Box)(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
@@ -60,10 +60,10 @@ const Contact = () => {
                                         variant="body1"
                                         color="text.secondary"
                                         component="a"
-                                        href="mailto:[EMAIL_ADDRESS]"
+                                        href="mailto:contact@daveswimschool.ca"
                                         sx={{ lineHeight: 1.6, color: 'primary.main', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}
                                     >
-                                        [EMAIL_ADDRESS]
+                                        contact@daveswimschool.ca
                                     </Typography>
                                 </Box>
                             </Box>
@@ -77,10 +77,10 @@ const Contact = () => {
                                         variant="body1"
                                         color="text.secondary"
                                         component="a"
-                                        href="tel:[PHONE_NUMBER]"
+                                        href="tel:6477464644"
                                         sx={{ lineHeight: 1.6, color: 'inherit', textDecoration: 'none', '&:hover': { color: 'primary.main' } }}
                                     >
-                                        [PHONE_NUMBER]
+                                        647 746-4644
                                     </Typography>
                                 </Box>
                             </Box>
@@ -89,12 +89,12 @@ const Contact = () => {
                     <Grid size={{ xs: 12, md: 6 }} sx={{ display: { xs: 'none', md: 'block' } }}>
                         <Box
                             component="img"
-                            src={placeholder}
-                            alt="Pool and lessons"
+                            src={logoBig}
+                            alt="Dave's Swim School logo"
                             sx={{
                                 width: '100%',
-                                objectFit: 'cover',
-                                aspectRatio: '4/3',
+                                objectFit: 'contain',
+                                maxHeight: 420,
                                 borderRadius: 2,
                                 mt: { xs: 4, md: 0 },
                             }}
