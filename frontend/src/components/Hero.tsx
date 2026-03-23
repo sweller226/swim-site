@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles';
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import SchoolIcon from '@mui/icons-material/School';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import heroBg from '../assets/hero_background4.jpg';
+import heroBg from '../assets/hero_background.jpg';
 
 const HeroSection = styled(Box)(({ theme }) => ({
     position: 'relative',
