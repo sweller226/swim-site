@@ -74,7 +74,7 @@ const LessonTypesSection = () => {
                                 </Typography>
                             </Box>
                             <PriceTag variant="h5">
-                                $55 · 30 min &nbsp;|&nbsp; $95 · 1 hr
+                                $55 · 30 min &nbsp;|&nbsp; $72 · 45 min &nbsp;|&nbsp; $95 · 1 hr
                             </PriceTag>
                             <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                                 1–2 students (same client). Students must be age 6+. Lessons taught at our pool.
