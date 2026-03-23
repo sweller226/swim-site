@@ -99,7 +99,7 @@ const LessonTypesSection = () => {
                                     <ListItemText primary="$20 per additional student (per class)"/>
                                 </ListItem>
                             </List>
-                            <Button variant="contained" size="large" fullWidth sx={{ mt: 'auto' }} component="a" href="https://bookeo.com/testing123" target="_blank" rel="noopener noreferrer">
+                            <Button variant="contained" size="large" fullWidth sx={{ mt: 'auto' }} component="a" href="https://bookeo.com/daveswimschool" target="_blank" rel="noopener noreferrer">
                                 Book Now
                             </Button>
                         </CourseCard>
@@ -140,7 +140,7 @@ const LessonTypesSection = () => {
                                     <ListItemText primary="$20 per additional student (per class)"/>
                                 </ListItem>
                             </List>
-                            <Button variant="contained" size="large" fullWidth sx={{ mt: 'auto' }} component="a" href="https://bookeo.com/testing123" target="_blank" rel="noopener noreferrer">
+                            <Button variant="contained" size="large" fullWidth sx={{ mt: 'auto' }} component="a" href="https://bookeo.com/daveswimschool" target="_blank" rel="noopener noreferrer">
                                 Book Now
                             </Button>
                         </CourseCard>
@@ -175,7 +175,7 @@ const LessonTypesSection = () => {
                                     <ListItemText primary="Swimmers must be age 6+" />
                                 </ListItem>
                             </List>
-                            <Button variant="contained" size="large" fullWidth sx={{ mt: 'auto' }} component="a" href="https://bookeo.com/testing123" target="_blank" rel="noopener noreferrer">
+                            <Button variant="contained" size="large" fullWidth sx={{ mt: 'auto' }} component="a" href="https://bookeo.com/daveswimschool" target="_blank" rel="noopener noreferrer">
                                 Book Now
                             </Button>
                         </CourseCard>

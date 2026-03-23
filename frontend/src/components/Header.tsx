@@ -65,7 +65,7 @@ const Header = () => {
                         <Button color={location.pathname === '/contact' ? 'primary' : 'inherit'} component={Link} to="/contact">
                             Contact Us
                         </Button>
-                        <Button variant="contained" color="primary" size="large" component="a" href="https://bookeo.com/testing123" target="_blank" rel="noopener noreferrer">
+                        <Button variant="contained" color="primary" size="large" component="a" href="https://bookeo.com/daveswimschool" target="_blank" rel="noopener noreferrer">
                             Book Now
                         </Button>
                     </Box>

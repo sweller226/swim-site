@@ -73,7 +73,7 @@ const Hero = () => {
                             </Typography>
 
                             <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
-                                <Button variant="contained" color="primary" size="large" component="a" href="https://bookeo.com/testing123" target="_blank" rel="noopener noreferrer">
+                                <Button variant="contained" color="primary" size="large" component="a" href="https://bookeo.com/daveswimschool" target="_blank" rel="noopener noreferrer">
                                     Book Now
                                 </Button>
                             </Stack>

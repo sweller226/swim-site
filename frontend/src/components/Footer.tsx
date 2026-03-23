@@ -85,7 +85,7 @@ const Footer = () => {
                         <Typography component="h2" sx={footerHeadingSx}>Quick Links</Typography>
                         <Box>
                             <Link component={RouterLink} to="/" onClick={() => window.scrollTo(0, 0)} sx={footerLinkSx}>Home</Link>
-                            <Link href="https://bookeo.com/testing123" target="_blank" rel="noopener noreferrer" sx={footerLinkSx}>Book Classes</Link>
+                            <Link href="https://bookeo.com/daveswimschool" target="_blank" rel="noopener noreferrer" sx={footerLinkSx}>Book Classes</Link>
                             {/* <Link component={RouterLink} to="/#instructors" sx={footerLinkSx}>Our Instructors</Link> */}
                             <Link component={RouterLink} to="/contact" sx={footerLinkSx}>Contact Us</Link>
                             <Link component={RouterLink} to="/faq" sx={footerLinkSx}>FAQ</Link>
