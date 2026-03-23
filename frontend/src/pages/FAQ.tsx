@@ -26,7 +26,7 @@ const PageHeader = styled(Box)(({ theme }) => ({
 const faqs: { question: string; answer: string | ReactNode }[] = [
     {
         question: 'What ages do you teach?',
-        answer: 'We offer private classes and pool rental for swimmers ages 6 and up, and any age group for travel lessons. Our instructors tailor the approach to each swimmer\'s age and comfort level.',
+        answer: 'We offer Private On-Site lessons and pool rental for swimmers ages 6 and up, and any age group for travel lessons. Our instructors tailor the approach to each swimmer\'s age and comfort level.',
     },
     {
         question: 'Do I need to bring anything?',

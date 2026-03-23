@@ -40,7 +40,7 @@ const LessonTypesSection = () => {
                 Lesson Types
             </Typography>
             <Grid container spacing={{ xs: 3, md: 4 }}>
-                    {/* Private */}
+                    {/* Private On-Site */}
                     <Grid size={{ xs: 12, md: 4 }}>
                         <CourseCard
                             elevation={3}
@@ -70,7 +70,7 @@ const LessonTypesSection = () => {
                             <Box display="flex" alignItems="center" gap={2} mb={2}>
                                 <PersonIcon color="primary" fontSize="large" />
                                 <Typography variant="h5" component="h2" fontWeight="bold">
-                                    Private
+                                    On-Site
                                 </Typography>
                             </Box>
                             <PriceTag variant="h5">
@@ -152,7 +152,7 @@ const LessonTypesSection = () => {
                             <Box display="flex" alignItems="center" gap={2} mb={2}>
                                 <PoolIcon color="primary" fontSize="large" />
                                 <Typography variant="h5" component="h2" fontWeight="bold">
-                                    Renting Pool
+                                    Pool Rental
                                 </Typography>
                             </Box>
                             <PriceTag variant="h5">
@@ -193,33 +193,34 @@ const BundlesSection = () => {
                     Bundles & Deals
                 </Typography>
                 <Typography variant="body1" color="text.secondary" paragraph>
-                    We offer bundle options for any class type &ndash; private, travel, or renting. Bundles work best if you want a recurring class schedule.
+                    Our bundles work like punch cards: you buy credits online and use them to book lessons. For any class type&mdash;on-site, travel, or renting&mdash;you can purchase a package of{' '}
+                    <strong>six booking credits for the price of five</strong>.
                 </Typography>
                 <Stack spacing={2} sx={{ mt: 2 }}>
                     <Box display="flex" alignItems="flex-start" gap={2}>
                         <CheckCircleIcon color="secondary" fontSize="large" sx={{ mt: 0.5 }} />
                         <Box>
-                            <Typography variant="subtitle1" fontWeight="bold">8-Class Bundle</Typography>
+                            <Typography variant="subtitle1" fontWeight="bold">6 credits for the price of 5</Typography>
                             <Typography variant="body2" color="text.secondary">
-                                Twice a week for 4 weeks (8 classes total). Great for building momentum and fast progress.
+                                Buy a package of six online credits at the cost of five single bookings&mdash;best value when you plan multiple lessons.
                             </Typography>
                         </Box>
                     </Box>
                     <Box display="flex" alignItems="flex-start" gap={2}>
                         <CheckCircleIcon color="secondary" fontSize="large" sx={{ mt: 0.5 }} />
                         <Box>
-                            <Typography variant="subtitle1" fontWeight="bold">6-Class Bundle</Typography>
+                            <Typography variant="subtitle1" fontWeight="bold">Punch-card credits</Typography>
                             <Typography variant="body2" color="text.secondary">
-                                Once a week for 6 weeks (6 classes total). A steady pace that fits busy schedules.
+                                Each class booking uses one credit from your balance until the package is used up.
                             </Typography>
                         </Box>
                     </Box>
                     <Box display="flex" alignItems="flex-start" gap={2}>
                         <CheckCircleIcon color="secondary" fontSize="large" sx={{ mt: 0.5 }} />
                         <Box>
-                            <Typography variant="subtitle1" fontWeight="bold">Extra Value &amp; Flexibility</Typography>
+                            <Typography variant="subtitle1" fontWeight="bold">Buy &amp; book online</Typography>
                             <Typography variant="body2" color="text.secondary">
-                                Book 6+ recurring classes and get one class free. If our recurring slots don&apos;t fit, call us to arrange a flexible schedule.
+                                Purchase credit packages and redeem them when you schedule through our online booking system.
                             </Typography>
                         </Box>
                     </Box>

@@ -14,13 +14,13 @@ const InfoSection = () => {
                             What We Offer
                         </Typography>
                         <Typography variant="body1" paragraph>
-                            From private instruction at our pool to lessons at yours—we provide flexible options to fit your schedule and goals.
+                            From Private On-Site lessons at our pool to lessons at yours—we provide flexible options to fit your schedule and goals.
                         </Typography>
                         <Stack spacing={2} sx={{ mb: 4 }}>
                             <Box display="flex" alignItems="flex-start" gap={2}>
                                 <PersonIcon color="primary" fontSize="large" sx={{ mt: 0.5 }} />
                                 <Box>
-                                    <Typography variant="subtitle1" fontWeight="bold">Private Classes</Typography>
+                                    <Typography variant="subtitle1" fontWeight="bold">Private On-Site</Typography>
                                     <Typography variant="body2" color="text.secondary">
                                         30-min, 45-min, or 1hr sessions for 1–2 students. Request what level you want us to teach. Supports an adaptable teaching style. Add an additional student for a small fee.
                                     </Typography>
