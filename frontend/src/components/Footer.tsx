@@ -94,9 +94,6 @@ const Footer = () => {
 
                     <Grid size={{ xs: 12, sm: 6, md: 4 }}>
                         <Typography component="h2" sx={footerHeadingSx}>Contact Info</Typography>
-                        <Typography variant="body2" sx={{ color: 'rgba(255, 255, 255, 0.85)', mb: 1, lineHeight: 1.6 }}>
-                            123 Swim Lane, Water City, ST 12345
-                        </Typography>
                         <Typography variant="body2" sx={{ color: 'rgba(255, 255, 255, 0.85)', mb: 5, lineHeight: 1.6 }}>
                             Email: contact@daveswimschool.ca<br />
                             Phone: 647 746-4644

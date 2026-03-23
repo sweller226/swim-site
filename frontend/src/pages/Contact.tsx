@@ -1,5 +1,4 @@
 import { Container, Typography, Box, Grid } from '@mui/material';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import { styled } from '@mui/material/styles';
@@ -38,18 +37,6 @@ const Contact = () => {
                             by email or phone. We&apos;re happy to help you adjust your schedule or answer any other questions about lessons.
                         </Typography>
                         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
-                            <Box display="flex" alignItems="flex-start" gap={2}>
-                                <LocationOnIcon color="primary" sx={{ fontSize: 40, mt: 0.5 }} />
-                                <Box>
-                                    <Typography variant="h6" fontWeight="bold" color="text.primary">
-                                        Address
-                                    </Typography>
-                                    <Typography variant="body1" color="text.secondary" sx={{ lineHeight: 1.6 }}>
-                                        123 Swim Lane<br />
-                                        Water City, ST 12345
-                                    </Typography>
-                                </Box>
-                            </Box>
                             <Box display="flex" alignItems="flex-start" gap={2}>
                                 <EmailIcon color="primary" sx={{ fontSize: 40, mt: 0.5 }} />
                                 <Box>

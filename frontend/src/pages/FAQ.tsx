@@ -1,5 +1,14 @@
-import { useState } from 'react';
-import { Container, Typography, Box, Accordion, AccordionSummary, AccordionDetails, Grid } from '@mui/material';
+import { useState, type ReactNode } from 'react';
+import {
+    Container,
+    Typography,
+    Box,
+    Accordion,
+    AccordionSummary,
+    AccordionDetails,
+    Grid,
+    Link,
+} from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { styled } from '@mui/material/styles';
 
@@ -14,7 +23,7 @@ const PageHeader = styled(Box)(({ theme }) => ({
     textAlign: 'center',
 }));
 
-const faqs = [
+const faqs: { question: string; answer: string | ReactNode }[] = [
     {
         question: 'What ages do you teach?',
         answer: 'We offer private classes and pool rental for swimmers ages 6 and up, and any age group for travel lessons. Our instructors tailor the approach to each swimmer\'s age and comfort level.',
@@ -25,15 +34,29 @@ const faqs = [
     },
     {
         question: 'How do I book or reschedule a lesson?',
-        answer: 'You can book and manage lessons through our online scheduling system on the Lessons page. For reschedules or cancellations, please do so at least 24 hours in advance when possible.',
+        answer: (
+            <>
+                You can book and manage lessons through our{' '}
+                <Link
+                    href="https://bookeo.com/daveswimschool"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    underline="always"
+                    sx={{ color: 'inherit', fontWeight: 500 }}
+                >
+                    online booking system
+                </Link>
+                . For reschedules or cancellations, please do so at least 48 hours in advance when possible.
+            </>
+        ),
     },
     {
         question: 'What is your cancellation policy?',
-        answer: 'We ask for at least 24 hours notice for cancellations or reschedules. For questions about specific bookings, contact us directly.',
+        answer: 'We ask for at least 48 hours notice for cancellations or reschedules. For questions about specific bookings, contact us directly.',
     },
     {
         question: 'Where are lessons held?',
-        answer: 'Lessons take place at our pool facility. The exact address is _______. Access details will be confirmed when you book. If you have a pool at home, we can come to you for travel lessons.',
+        answer: 'Lessons take place at our fully-equipped backyard pool facility. The exact address is 66 Stonedene Blvd in North York. Access details will be confirmed when you book. If you have a pool at home, we can come to you for travel lessons.',
     },
     {
         question: 'Are your instructors certified?',

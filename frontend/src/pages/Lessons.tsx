@@ -118,7 +118,7 @@ const LessonTypesSection = () => {
                                 $90 · 45 min &nbsp;|&nbsp; $110 · 1 hr
                             </PriceTag>
                             <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-                                We come to teach at your pool. Students must be age 6+.
+                                We come to teach at your pool. Students can be of any age.
                             </Typography>
                             <List dense disablePadding sx={{ mb: 2 }}>
                                 <ListItem disablePadding sx={{ mb: 1 }}>

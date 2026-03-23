@@ -22,7 +22,7 @@ const InfoSection = () => {
                                 <Box>
                                     <Typography variant="subtitle1" fontWeight="bold">Private Classes</Typography>
                                     <Typography variant="body2" color="text.secondary">
-                                        30-min or 1hr sessions for 1–2 students. Choose your level, book spot or scheduled. Add an additional student for a small fee.
+                                        30-min, 45-min, or 1hr sessions for 1–2 students. Request what level you want us to teach. Supports an adaptable teaching style. Add an additional student for a small fee.
                                     </Typography>
                                 </Box>
                             </Box>
@@ -62,7 +62,7 @@ const InfoSection = () => {
                                 <Box>
                                     <Typography variant="subtitle1" fontWeight="bold">Well-Maintained Backyard Pool</Typography>
                                     <Typography variant="body2" color="text.secondary">
-                                        Lessons run in a clean, well-maintained backyard pool that&apos;s kept comfortable for swimmers of all ages.
+                                        Lessons run in a fully-equipped, backyard pool that&apos;s kept comfortable for swimmers of all ages. Located at 66 Stonedene Blvd in North York.
                                     </Typography>
                                 </Box>
                             </Box>
@@ -71,7 +71,7 @@ const InfoSection = () => {
                                 <Box>
                                     <Typography variant="subtitle1" fontWeight="bold">Experienced Instructors</Typography>
                                     <Typography variant="body2" color="text.secondary">
-                                        Every instructor has at least 2 years of experience working in the City, with a strong focus on safety and progress.
+                                        Every instructor brings at least two years of experience teaching with the City, along with strong private‑lesson expertise for swimmers of all ages.
                                     </Typography>
                                 </Box>
                             </Box>
