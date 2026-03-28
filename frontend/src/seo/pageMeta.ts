@@ -3,6 +3,13 @@ export type PageMeta = {
     description: string;
 };
 
+/** Homepage copy — also injected into `index.html` at build for crawlers (Discord, etc.) that do not run JS. */
+export const HOMEPAGE_META: PageMeta = {
+    title: "Dave's Swim School | Private Swim Lessons in North York",
+    description:
+        "Private on-site and travel swim lessons for kids and adults. Book online, learn with experienced instructors, and build confidence in the water.",
+};
+
 const defaultMeta: PageMeta = {
     title: "Dave's Swim School",
     description:
@@ -10,11 +17,7 @@ const defaultMeta: PageMeta = {
 };
 
 const byPath: Record<string, PageMeta> = {
-    '/': {
-        title: "Dave's Swim School | Private Swim Lessons in North York",
-        description:
-            "Private on-site and travel swim lessons for kids and adults. Book online, learn with experienced instructors, and build confidence in the water.",
-    },
+    '/': HOMEPAGE_META,
     '/lessons': {
         title: "Swim Lesson Pricing | Dave's Swim School",
         description:

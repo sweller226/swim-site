@@ -1,9 +1,11 @@
+/// <reference types="vite/client" />
+
 /**
  * Production site origin, no trailing slash (e.g. https://daveswimschool.ca).
  * Set VITE_SITE_URL in `.env` / Netlify env for canonical, Open Graph, and Twitter URLs.
  */
 export function getSiteUrl(): string {
-    const raw = import.meta.env.VITE_SITE_URL as string | undefined;
+    const raw = import.meta.env.VITE_SITE_URL;
     if (raw == null || !String(raw).trim()) {
         return '';
     }
