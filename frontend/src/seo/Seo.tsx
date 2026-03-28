@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 import { getPageMeta } from './pageMeta';
-import { SITE_NAME, getAbsoluteOgImageUrl, getCanonicalUrl, getOgImagePath, getSiteUrl } from './site';
+import { OG_IMAGE_PATH, SITE_NAME, getAbsoluteOgImageUrl, getCanonicalUrl, getSiteUrl } from './site';
 
 const Seo = () => {
     const { pathname } = useLocation();
@@ -9,7 +9,7 @@ const Seo = () => {
     const siteUrl = getSiteUrl();
 
     const canonicalUrl = siteUrl ? getCanonicalUrl(siteUrl, pathname) : null;
-    const ogImageUrl = siteUrl ? getAbsoluteOgImageUrl(siteUrl, getOgImagePath()) : null;
+    const ogImageUrl = siteUrl ? getAbsoluteOgImageUrl(siteUrl, OG_IMAGE_PATH) : null;
 
     return (
         <Helmet>

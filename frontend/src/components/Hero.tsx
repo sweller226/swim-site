@@ -90,7 +90,7 @@ const Hero = () => {
                             </Typography>
 
                             <Typography variant="h5" color="text.secondary" fontWeight="800" sx={{ mb: 4, maxWidth: '600px' }}>
-                                Professional private on-site and travel swim lessons for all ages. Flexible booking, experienced instructors, and a safe, fun environment.
+                                Private on-site and travel swim lessons for all ages. Flexible booking, experienced instructors, and a safe, fun environment.
                             </Typography>
 
                             <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>

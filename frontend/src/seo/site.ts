@@ -10,17 +10,8 @@ export function getSiteUrl(): string {
     return String(raw).trim().replace(/\/+$/, '');
 }
 
-/** Served from /public — prefer a 1200×630 JPG/PNG for best previews; SVG is not ideal on all networks. */
-export const DEFAULT_OG_IMAGE_PATH = '/Logo-Small.svg';
-
-export function getOgImagePath(): string {
-    const override = import.meta.env.VITE_OG_IMAGE_PATH as string | undefined;
-    if (override != null && String(override).trim()) {
-        const p = String(override).trim();
-        return p.startsWith('/') ? p : `/${p}`;
-    }
-    return DEFAULT_OG_IMAGE_PATH;
-}
+/** Open Graph / Twitter preview image — file in `public/`. */
+export const OG_IMAGE_PATH = '/Logo-Big.png';
 
 export const SITE_NAME = "Dave's Swim School";
 
