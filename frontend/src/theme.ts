@@ -3,10 +3,10 @@ import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 // Color Palette
 const colors = {
     primary: {
-        main: '#0077be',
-        light: '#4da6e8',
-        dark: '#004782',
-        contrastText: '#ffffff',
+        main: "#0077be",
+        background: "#C3E8FB",
+        dark: "#004782",
+        lighter: "#0094ce"
     },
     secondary: {
         main: '#00a896',
