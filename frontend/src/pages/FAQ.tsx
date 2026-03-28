@@ -26,7 +26,7 @@ const PageHeader = styled(Box)(({ theme }) => ({
 const faqs: { question: string; answer: string | ReactNode }[] = [
     {
         question: 'What ages do you teach?',
-        answer: 'We offer Private On-Site lessons and pool rental for swimmers ages 6 and up, and any age group for travel lessons. Our instructors tailor the approach to each swimmer\'s age and comfort level.',
+        answer: 'We offer Private On-Site lessons and pool rental for swimmers ages 6 and up, and any age group for travel lessons.',
     },
     {
         question: 'Do I need to bring anything?',
@@ -44,9 +44,9 @@ const faqs: { question: string; answer: string | ReactNode }[] = [
                     underline="always"
                     sx={{ color: 'inherit', fontWeight: 500 }}
                 >
-                    online booking system
+                    online booking system, Bookeo
                 </Link>
-                . For reschedules or cancellations, please do so at least 48 hours in advance when possible.
+                . For reschedules or cancellations, please do so at least 48 hours in advance.
             </>
         ),
     },
@@ -56,11 +56,15 @@ const faqs: { question: string; answer: string | ReactNode }[] = [
     },
     {
         question: 'Where are lessons held?',
-        answer: 'Lessons take place at our fully-equipped backyard pool facility. The exact address is 66 Stonedene Blvd in North York. Access details will be confirmed when you book. If you have a pool at home, we can come to you for travel lessons.',
+        answer: 'Lessons take place at our fully-equipped backyard pool facility, at 66 Stonedene Blvd in North York. Access details will be confirmed when you book. If you have a pool at home, we can come to you for travel lessons.',
     },
     {
         question: 'Are your instructors certified?',
         answer: 'Yes. Our instructors are experienced workers with the City of Toronto or Vaughan Parks and Recreation. All instructors are certified through the Lifesaving Society.',
+    },
+    {
+        question: 'Are your lessons suitable for everyone?',
+        answer: 'Absolutely. Our lessons are private, inclusive, and fully tailored to each swimmer\'s needs. Whether you\'re a nervous beginner, have a learning difference, a physical disability, or want to refine a specific skill.',
     },
 ];
 
@@ -78,7 +82,7 @@ const FAQ = () => {
                     <Typography variant="h2" component="h1" fontWeight="bold" gutterBottom color="inherit">
                         Frequently Asked Questions
                     </Typography>
-                    <Typography variant="h5" color="inherit" sx={{ opacity: 0.95 }}>
+                    <Typography variant="h5" component="p" color="inherit" sx={{ opacity: 0.95 }}>
                         Quick answers to common questions about our swim lessons.
                     </Typography>
                 </Container>
@@ -108,7 +112,7 @@ const FAQ = () => {
                                     }}
                                 >
                                     <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                                        <Typography fontWeight={600} color="text.primary">
+                                        <Typography component="span" variant="subtitle1" fontWeight={600} color="text.primary" sx={{ m: 0, width: '100%' }}>
                                             {faq.question}
                                         </Typography>
                                     </AccordionSummary>
@@ -136,7 +140,7 @@ const FAQ = () => {
                             <Box
                                 component="img"
                                 src={faq1}
-                                alt="Swimming lesson"
+                                alt="Young swimmer with an adult instructor during a one-on-one lesson in the pool"
                                 sx={{
                                     width: '100%',
                                     objectFit: 'cover',
@@ -147,7 +151,7 @@ const FAQ = () => {
                             <Box
                                 component="img"
                                 src={faq2}
-                                alt="Swimming lesson"
+                                alt="Swim instructor supporting a child at the edge of the pool during practice"
                                 sx={{
                                     width: '100%',
                                     objectFit: 'cover',

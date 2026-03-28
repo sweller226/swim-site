@@ -57,7 +57,26 @@ const Footer = () => {
                         <Typography variant="body2" sx={{ color: 'rgba(255, 255, 255, 0.85)', mb: 3, maxWidth: 300, lineHeight: 1.6 }}>
                             Building confidence in the water. We provide a safe, fun, and encouraging environment for swimmers of all ages.
                         </Typography>
-                        <Stack direction="row" spacing={1}>
+                    </Grid>
+
+                    <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+                        <Typography component="h2" sx={footerHeadingSx}>Quick Links</Typography>
+                        <Box>
+                            <Link component={RouterLink} to="/" onClick={() => window.scrollTo(0, 0)} sx={footerLinkSx}>Home</Link>
+                            <Link href="https://bookeo.com/daveswimschool" target="_blank" rel="noopener noreferrer" sx={footerLinkSx}>Book Classes</Link>
+                            {/* <Link component={RouterLink} to="/#instructors" sx={footerLinkSx}>Our Instructors</Link> */}
+                            <Link component={RouterLink} to="/contact" sx={footerLinkSx}>Contact Us</Link>
+                            <Link component={RouterLink} to="/faq" sx={footerLinkSx}>FAQ</Link>
+                        </Box>
+                    </Grid>
+
+                    <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+                        <Typography component="h2" sx={footerHeadingSx}>Contact Info</Typography>
+                        <Typography variant="body2" sx={{ color: 'rgba(255, 255, 255, 0.85)', mb: 2, lineHeight: 1.6 }}>
+                            Email: contact@daveswimschool.ca<br />
+                            Phone: 647 746-4644
+                        </Typography>
+                        <Stack direction="row" spacing={1} sx={{ mb: 3 }}>
                             <Link
                                 href="https://www.facebook.com/daveswimschool"
                                 target="_blank"
@@ -79,25 +98,6 @@ const Footer = () => {
                                 </SocialButton>
                             </Link>
                         </Stack>
-                    </Grid>
-
-                    <Grid size={{ xs: 12, sm: 6, md: 4 }}>
-                        <Typography component="h2" sx={footerHeadingSx}>Quick Links</Typography>
-                        <Box>
-                            <Link component={RouterLink} to="/" onClick={() => window.scrollTo(0, 0)} sx={footerLinkSx}>Home</Link>
-                            <Link href="https://bookeo.com/daveswimschool" target="_blank" rel="noopener noreferrer" sx={footerLinkSx}>Book Classes</Link>
-                            {/* <Link component={RouterLink} to="/#instructors" sx={footerLinkSx}>Our Instructors</Link> */}
-                            <Link component={RouterLink} to="/contact" sx={footerLinkSx}>Contact Us</Link>
-                            <Link component={RouterLink} to="/faq" sx={footerLinkSx}>FAQ</Link>
-                        </Box>
-                    </Grid>
-
-                    <Grid size={{ xs: 12, sm: 6, md: 4 }}>
-                        <Typography component="h2" sx={footerHeadingSx}>Contact Info</Typography>
-                        <Typography variant="body2" sx={{ color: 'rgba(255, 255, 255, 0.85)', mb: 5, lineHeight: 1.6 }}>
-                            Email: contact@daveswimschool.ca<br />
-                            Phone: 647 746-4644
-                        </Typography>
                         <Typography variant="caption" sx={{ color: 'rgba(255, 255, 255, 0.75)', display: 'block', lineHeight: 1.5 }}>
                             For questions, date swaps, time changes, extra info, or payment transfers, please contact me.
                         </Typography>

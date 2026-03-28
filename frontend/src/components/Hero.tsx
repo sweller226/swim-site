@@ -5,12 +5,10 @@ import SchoolIcon from '@mui/icons-material/School';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import heroBg from '../assets/hero_background.jpg';
 
-const HeroSection = styled(Box)(({ theme }) => ({
+const HeroSection = styled('section')(({ theme }) => ({
     position: 'relative',
+    overflow: 'hidden',
     backgroundColor: theme.palette.primary.light,
-    backgroundImage: `url(${heroBg})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
     minHeight: '480px',
     [theme.breakpoints.up('md')]: {
         minHeight: '600px',
@@ -25,8 +23,9 @@ const HeroSection = styled(Box)(({ theme }) => ({
         left: 0,
         right: 0,
         bottom: 0,
+        zIndex: 1,
         background: 'linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.5) 60%, rgba(255,255,255,0.2) 100%)',
-    }
+    },
 }));
 
 const StyledTrustBadge = styled(Paper)(({ theme }) => ({
@@ -53,8 +52,23 @@ const TrustBadge = ({ icon, text }: { icon: React.ReactNode; text: string }) => 
 
 const Hero = () => {
     return (
-        <HeroSection>
-            <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', flex: 1 }}>
+        <HeroSection aria-labelledby="hero-main-heading">
+            <Box
+                component="img"
+                src={heroBg}
+                alt="low opacity background image of rippling water"
+                aria-hidden
+                sx={{
+                    position: 'absolute',
+                    inset: 0,
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    objectPosition: 'center',
+                    zIndex: 0,
+                }}
+            />
+            <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2, display: 'flex', flexDirection: 'column', flex: 1 }}>
                 <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap sx={{ pt: 3, pb: 2 }}>
                     <TrustBadge icon={<VerifiedUserIcon color="primary" />} text="Fully Insured" />
                     <TrustBadge icon={<SchoolIcon color="primary" />} text="Experienced Instructors" />
@@ -64,12 +78,19 @@ const Hero = () => {
                 <Box sx={{ flex: 1, display: 'flex', alignItems: 'center' }}>
                     <Grid container spacing={4}>
                         <Grid size={{ xs: 12, md: 7 }}>
-                            <Typography variant="h2" component="h1" fontWeight="800" gutterBottom sx={{ color: 'primary.main' }}>
+                            <Typography
+                                id="hero-main-heading"
+                                variant="h2"
+                                component="h1"
+                                fontWeight="800"
+                                gutterBottom
+                                sx={{ color: 'primary.main' }}
+                            >
                                 Confidence in the Water Starts Here
                             </Typography>
 
                             <Typography variant="h5" color="text.secondary" fontWeight="800" sx={{ mb: 4, maxWidth: '600px' }}>
-                                Professional Private On-Site and travel swim instruction for all ages. Flexible booking, experienced teachers, and a safe, fun environment.
+                                Professional private on-site and travel swim lessons for all ages. Flexible booking, experienced instructors, and a safe, fun environment.
                             </Typography>
 
                             <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>

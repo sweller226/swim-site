@@ -20,7 +20,7 @@ const colors = {
     },
     text: {
         primary: '#0d2b3e',
-        secondary: '#455a64',
+        secondary: '#394A52',
     },
 };
 
