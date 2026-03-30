@@ -3,15 +3,17 @@ import { styled } from '@mui/material/styles';
 import { Link as RouterLink } from 'react-router-dom';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import Wave from './Wave';
 
 const FooterContainer = styled('footer')(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
     color: 'rgba(255, 255, 255, 0.95)',
-    paddingTop: theme.spacing(6),
+    paddingTop: theme.spacing(14),
     paddingBottom: theme.spacing(4),
+    position: 'relative',
     [theme.breakpoints.up('md')]: {
-        paddingTop: theme.spacing(8),
-        paddingBottom: theme.spacing(5),
+        paddingTop: theme.spacing(22),
+        paddingBottom: theme.spacing(6),
     },
     marginTop: 'auto',
 }));
@@ -50,7 +52,9 @@ const SocialButton = styled(IconButton)(({ theme }) => ({
 const Footer = () => {
     return (
         <FooterContainer>
-            <Container maxWidth="lg">
+            <Wave height={220} top style={{ zIndex: 2 }} />
+
+            <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2 }}>
                 <Grid container spacing={{ xs: 4, md: 6 }}>
                     <Grid size={{ xs: 12, md: 4 }}>
                         <Typography component="h2" sx={footerHeadingSx}>Dave's Swim School</Typography>

@@ -3,20 +3,13 @@ import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import { styled } from '@mui/material/styles';
 import logoBig from '../assets/Logo-Big.png';
-
-const PageHeader = styled(Box)(({ theme }) => ({
-    backgroundColor: theme.palette.primary.main,
-    color: theme.palette.primary.contrastText,
-    padding: theme.spacing(10, 0, 6, 0),
-    marginBottom: theme.spacing(6),
-    textAlign: 'center',
-}));
+import PageHeader from '../components/PageHeader';
+import Wave from '../components/Wave';
 
 const Contact = () => {
     return (
-        <Box sx={{ pb: 8 }}>
+        <Box sx={{ pb: 2 }}>
             <PageHeader>
                 <Container maxWidth="md">
                     <Typography variant="h2" component="h1" fontWeight="bold" gutterBottom color="inherit">
@@ -26,9 +19,10 @@ const Contact = () => {
                         Get in touch with any questions about our swim lessons.
                     </Typography>
                 </Container>
+                <Wave height={180} bottom style={{ zIndex: 2 }} />
             </PageHeader>
 
-            <Container maxWidth="lg">
+            <Container maxWidth="lg" sx={{mt: -2}}>
                 <Grid container spacing={{ xs: 4, md: 5 }} alignItems="flex-start" sx={{ mt: { xs: 4, md: 6 } }}>
                     <Grid size={{ xs: 12, md: 6 }}>
                         <Typography variant="h3" component="h2" sx={{ display: 'block', mb: 2, color: 'primary.main' }}>

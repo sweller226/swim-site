@@ -19,14 +19,8 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import { styled } from '@mui/material/styles';
-
-const PageHeader = styled(Box)(({ theme }) => ({
-    backgroundColor: theme.palette.primary.main,
-    color: theme.palette.primary.contrastText,
-    padding: theme.spacing(10, 0, 6, 0),
-    marginBottom: theme.spacing(6),
-    textAlign: 'center',
-}));
+import Wave from '../components/Wave';
+import PageHeader from '../components/PageHeader';
 
 const PriceTag = styled(Typography)(({ theme }) => ({
     color: theme.palette.secondary.main,
@@ -368,7 +362,7 @@ const BundlesSection = () => {
 
 const Lessons = () => {
     return (
-        <Box sx={{ pb: 8 }}>
+        <Box sx={{ pb: 2 }}>
             <PageHeader>
                 <Container maxWidth="md">
                     <Typography variant="h2" component="h1" fontWeight="bold" gutterBottom color="inherit">
@@ -378,6 +372,9 @@ const Lessons = () => {
                         Choose the learning style that fits your goals and schedule.
                     </Typography>
                 </Container>
+
+                <Wave height={180} bottom style={{ zIndex: 2 }} />
+
             </PageHeader>
 
             <Container maxWidth="lg">

@@ -12,16 +12,11 @@ import {
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { styled } from '@mui/material/styles';
 
+import Wave from '../components/Wave';
+import PageHeader from '../components/PageHeader';
+
 import faq1 from '../assets/faq1.jpg';
 import faq2 from '../assets/faq2.jpg';
-
-const PageHeader = styled(Box)(({ theme }) => ({
-    backgroundColor: theme.palette.primary.main,
-    color: theme.palette.primary.contrastText,
-    padding: theme.spacing(10, 0, 6, 0),
-    marginBottom: theme.spacing(6),
-    textAlign: 'center',
-}));
 
 const faqs: { question: string; answer: string | ReactNode }[] = [
     {
@@ -46,13 +41,13 @@ const faqs: { question: string; answer: string | ReactNode }[] = [
                 >
                     online booking system, Bookeo
                 </Link>
-                . For reschedules or cancellations, please do so at least 48 hours in advance.
+                . For reschedules or cancellations, please do so at least 24 hours in advance.
             </>
         ),
     },
     {
         question: 'What is your cancellation policy?',
-        answer: 'We ask for at least 48 hours notice for cancellations or reschedules. For questions about specific bookings, contact us directly.',
+        answer: 'We ask for at least 24 hours notice for cancellations or reschedules. For questions about specific bookings, contact us directly.',
     },
     {
         question: 'Where are lessons held?',
@@ -76,7 +71,7 @@ const FAQ = () => {
     };
 
     return (
-        <Box sx={{ pb: 8 }}>
+        <Box sx={{ pb: 2 }}>
             <PageHeader>
                 <Container maxWidth="md">
                     <Typography variant="h2" component="h1" fontWeight="bold" gutterBottom color="inherit">
@@ -86,6 +81,7 @@ const FAQ = () => {
                         Quick answers to common questions about our swim lessons.
                     </Typography>
                 </Container>
+                <Wave height={180} bottom style={{ zIndex: 2 }} />
             </PageHeader>
 
             <Container maxWidth="lg">

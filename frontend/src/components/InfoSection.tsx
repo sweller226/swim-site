@@ -6,14 +6,14 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 const InfoSection = () => {
     return (
-        <Box sx={{ py: { xs: 4, md: 6 }, bgcolor: 'background.default' }}>
+        <Box sx={{ bgcolor: 'background.default' }}>
             <Container maxWidth="lg">
                 <Grid container spacing={{ xs: 4, md: 6 }}>
                     <Grid size={{ xs: 12, md: 6 }}>
                         <Typography variant="h3" component="h2" gutterBottom fontWeight="bold" color="primary.main">
                             What We Offer
                         </Typography>
-                        <Typography variant="body1" paragraph>
+                        <Typography variant="body1">
                             From Private On-Site lessons at our pool to lessons at yours, we provide flexible options to fit your goals.
                         </Typography>
                         <Stack spacing={2} sx={{ mb: 4 }}>

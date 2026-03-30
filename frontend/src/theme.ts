@@ -21,6 +21,7 @@ const colors = {
     text: {
         primary: '#0d2b3e',
         secondary: '#394A52',
+        contrast: '#f4fafe'
     },
 };
 
