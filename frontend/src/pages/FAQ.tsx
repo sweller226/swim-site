@@ -10,7 +10,6 @@ import {
     Link,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { styled } from '@mui/material/styles';
 
 import Wave from '../components/Wave';
 import PageHeader from '../components/PageHeader';
