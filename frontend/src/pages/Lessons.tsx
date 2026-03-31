@@ -37,7 +37,7 @@ const CourseCard = styled(Paper)(({ theme }) => ({
     transition: 'transform 0.2s',
     '&:hover': {
         transform: 'translateY(-4px)',
-        boxShadow: theme.shadows[4],
+        boxShadow: theme.shadows[3],
     },
 }));
     
@@ -249,7 +249,7 @@ const BundlesSection = () => {
                                     alignItems: 'center',
                                     justifyContent: 'center',
                                     bgcolor: 'secondary.main',
-                                    color: 'common.white',
+                                    color: 'secondary.background',
                                     px: { xs: 2.5, sm: 3.5 },
                                     py: { xs: 1.75, sm: 2.25 },
                                     borderRadius: 3,
@@ -270,7 +270,7 @@ const BundlesSection = () => {
                                     alignItems: 'center',
                                     justifyContent: 'center',
                                     bgcolor: 'primary.main',
-                                    color: 'primary.contrastText',
+                                    color: 'primary.background',
                                     px: { xs: 2.25, sm: 3 },
                                     py: { xs: 1.25, sm: 2.25 },
                                     borderRadius: 3,
@@ -288,7 +288,13 @@ const BundlesSection = () => {
                     </Box>
                 </Grid>
 
-                <Divider orientation="vertical" flexItem sx={{ display: { xs: 'none', md: 'block' }, alignSelf: 'stretch', mx: 1 }} />
+                <Divider 
+                    orientation="vertical" 
+                    flexItem sx={{ display: { xs: 'none', md: 'block' }, 
+                    alignSelf: 'stretch', 
+                    mx: 1, 
+                    borderColor: 'transparent' 
+                }} />
 
                 {/* Features + CTA */}
                 <Grid size={{ xs: 12, md: 7 }} sx={{ display: 'flex' }}>

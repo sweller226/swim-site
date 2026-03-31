@@ -1,18 +1,28 @@
 import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 
+declare module '@mui/material/styles' {
+    interface PaletteColor {
+        background?: string;
+    }
+
+    interface SimplePaletteColorOptions {
+        background?: string;
+    }
+}
+
 // Color Palette
 const colors = {
     primary: {
         main: "#0077be",
-        background: "#C3E8FB",
+        background: "#f4fafe",
         dark: "#004782",
-        lighter: "#0094ce"
+        light: "#0094ce",
     },
     secondary: {
         main: '#00a896',
         light: '#4ccbb9',
         dark: '#007967',
-        contrastText: '#ffffff',
+        background: '#f4fafe',
     },
     background: {
         default: '#f4fafe', // Very light blue/white
@@ -20,8 +30,8 @@ const colors = {
     },
     text: {
         primary: '#0d2b3e',
-        secondary: '#394A52',
-        contrast: '#f4fafe'
+        secondary: '#5f7682',
+        contrast: '#ffffff' // 244,250,254
     },
 };
 

@@ -5,7 +5,7 @@ import {
 
 const PageHeader = styled(Box)(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
-    color: theme.palette.primary.contrastText,
+    color: theme.palette.primary.background,
     position: 'relative',                      // ← required for Wave to anchor correctly
     overflow: 'hidden',                        // ← keeps wave clipped to the header
     padding: theme.spacing(10, 0, 22, 0),      // ← extra bottom padding so wave doesn't overlap text

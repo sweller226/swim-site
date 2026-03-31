@@ -1,5 +1,5 @@
 import { Box, Container, Typography, Button, Grid, Paper, Stack } from '@mui/material';
-import { styled } from '@mui/material/styles';
+import { styled, alpha, type Theme } from '@mui/material/styles';
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import SchoolIcon from '@mui/icons-material/School';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
@@ -9,7 +9,6 @@ import Wave from './Wave'; // <-- import the reusable Wave component
 const HeroSection = styled('section')(({ theme }) => ({
   position: 'relative',
   overflow: 'hidden',
-  backgroundColor: theme.palette.primary.light,
   minHeight: '600px',
   paddingBottom: '200px', // make room for the wave
   [theme.breakpoints.up('md')]: {
@@ -27,8 +26,12 @@ const HeroSection = styled('section')(({ theme }) => ({
     right: 0,
     bottom: 0,
     zIndex: 1,
-    background:
-      'linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.5) 60%, rgba(255,255,255,0.2) 100%)',
+      backgroundImage: `linear-gradient(
+        90deg,
+        ${alpha(theme.palette.background.default, 0.85)} 10%,
+        ${alpha(theme.palette.background.default, 0.5)} 60%,
+        ${alpha(theme.palette.background.default, 0.2)} 100%
+      )`,
   },
 }));
 
@@ -90,25 +93,25 @@ const Hero = () => {
           <Grid container spacing={4}>
             <Grid size={{ xs: 12, md: 7 }}>
               <Typography
-                id="hero-main-heading"
-                variant="h2"
-                component="h1"
-                fontWeight="800"
-                gutterBottom
-                sx={{ color: 'primary.main' }}
-              >
-                Confidence in the Water Starts Here
-              </Typography>
+                  id="hero-main-heading"
+                  variant="h2"
+                  component="h1"
+                  fontWeight="800"
+                  gutterBottom
+                  sx={{ color: 'primary.main', mb: 1.5, textShadow: '0 2px 12px rgba(244,250,254,0.5), 0 1px 4px rgba(244,250,254,0.5)' }}
+                >
+                  Confidence in the Water Starts Here
+                </Typography>
 
-              <Typography
-                variant="h5"
-                color="text.secondary"
-                fontWeight="800"
-                sx={{ mb: 4, maxWidth: '600px' }}
-              >
-                Private on-site and travel swim lessons for all ages. Flexible booking,
-                experienced instructors, and a safe, fun environment.
-              </Typography>
+                <Typography
+                  variant="h5"
+                  color="text.secondary"
+                  fontWeight="800"
+                  sx={{ mb: 4, maxWidth: '600px', textShadow: '0 2px 10px rgba(244,250,254,0.5), 0 1px 4px rgba(244,250,254,0.5)' }}
+                >
+                  Private on-site and travel swim lessons for all ages. Flexible booking,
+                  experienced instructors, and a safe, fun environment.
+                </Typography>
 
               <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
                 <Button

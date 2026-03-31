@@ -100,10 +100,11 @@ const FAQ = () => {
                                     onChange={handleChange(index)}
                                     sx={{
                                         '&:before': { display: 'none' },
-                                        boxShadow: 'none',
+                                        borderRadius: 2,
+                                        boxShadow: '0 1px 2px rgba(0,0,0,0.08)',
+                                        background: 'background.paper',
                                         border: '1px solid',
-                                        borderColor: 'divider',
-                                        borderRadius: 1,
+                                        borderColor: 'rgba(0,0,0,0.10)'
                                     }}
                                 >
                                     <AccordionSummary expandIcon={<ExpandMoreIcon />}>
@@ -112,7 +113,7 @@ const FAQ = () => {
                                         </Typography>
                                     </AccordionSummary>
                                     <AccordionDetails>
-                                        <Typography color="text.secondary" sx={{ lineHeight: 1.7 }}>
+                                        <Typography color="text.primary" sx={{ lineHeight: 1.7 }}>
                                             {faq.answer}
                                         </Typography>
                                     </AccordionDetails>

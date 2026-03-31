@@ -1,5 +1,5 @@
-import { Box, Container, Typography, Link, Grid, Stack, IconButton } from '@mui/material';
-import { styled } from '@mui/material/styles';
+import { Box, Container, Typography, Link, Grid, Stack, IconButton, Divider } from '@mui/material';
+import { styled, alpha } from '@mui/material/styles';
 import { Link as RouterLink } from 'react-router-dom';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -11,6 +11,14 @@ const FooterContainer = styled('footer')(({ theme }) => ({
     paddingTop: theme.spacing(14),
     paddingBottom: theme.spacing(4),
     position: 'relative',
+    [theme.breakpoints.up('xs')]: {
+        paddingTop: theme.spacing(22),
+        paddingBottom: theme.spacing(6),
+    },
+    [theme.breakpoints.up('sm')]: {
+        paddingTop: theme.spacing(22),
+        paddingBottom: theme.spacing(6),
+    },
     [theme.breakpoints.up('md')]: {
         paddingTop: theme.spacing(22),
         paddingBottom: theme.spacing(6),
@@ -55,55 +63,84 @@ const Footer = () => {
             <Wave height={220} top style={{ zIndex: 2 }} />
 
             <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2 }}>
-                <Grid container spacing={{ xs: 4, md: 6 }}>
+                <Grid container spacing={{ xs: 5, md: 6 }}>
+
+                    {/* Brand block — full width on mobile, 4 cols on desktop */}
                     <Grid size={{ xs: 12, md: 4 }}>
-                        <Typography component="h2" sx={footerHeadingSx}>Dave's Swim School</Typography>
-                        <Typography variant="body2" sx={{ color: 'rgba(255, 255, 255, 0.85)', mb: 3, maxWidth: 300, lineHeight: 1.6 }}>
-                            Building confidence in the water. We provide a safe, fun, and encouraging environment for swimmers of all ages.
+                        <Stack direction="row" alignItems="center" spacing={1} sx={{ mb: 2 }}>
+                            <Box
+                                component="img"
+                                src="/Logo-Small.svg"
+                                alt="Dave's Swim School logo"
+                                sx={{ height: 32, width: 'auto', display: 'block', mr: 1 }}
+                            />
+                            <Typography variant="h6" sx={{ color: 'text.contrast', fontWeight: 700, letterSpacing: '0.01em' }}>
+                                Dave's Swim School
+                            </Typography>
+                        </Stack>
+                        <Typography
+                            variant="body2"
+                            sx={{
+                                color: (theme) => alpha(theme.palette.primary.background!, 0.95),
+                                mb: 2,
+                                maxWidth: { xs: '100%', md: 280 },
+                                lineHeight: 1.7,
+                            }}
+                        >
+                            Building confidence in the water. A safe, fun, and encouraging environment for swimmers of all ages.
                         </Typography>
+                        <Stack direction="row" spacing={1}>
+                            <Link href="https://www.facebook.com/daveswimschool" target="_blank" rel="noopener noreferrer" sx={{ lineHeight: 0 }}>
+                                <SocialButton size="medium" aria-label="Facebook">
+                                    <FacebookIcon fontSize="medium" />
+                                </SocialButton>
+                            </Link>
+                            <Link href="https://www.instagram.com/daveswimschool" target="_blank" rel="noopener noreferrer" sx={{ lineHeight: 0 }}>
+                                <SocialButton size="medium" aria-label="Instagram">
+                                    <InstagramIcon fontSize="medium" />
+                                </SocialButton>
+                            </Link>
+                        </Stack>
                     </Grid>
 
-                    <Grid size={{ xs: 12, sm: 6, md: 4 }}>
-                        <Typography component="h2" sx={footerHeadingSx}>Quick Links</Typography>
+                    {/* Divider — only on mobile, between brand and links */}
+                    <Grid size={{ xs: 12, md: 0 }} sx={{ display: { xs: 'block', md: 'none' }, py: 0 }}>
+                        <Divider sx={{ borderColor: 'rgba(255,255,255,0.15)' }} />
+                    </Grid>
+
+                    {/* Explore — half width on mobile, 4 cols on desktop */}
+                    <Grid size={{ xs: 6, md: 4 }}>
+                        <Typography component="h2" sx={footerHeadingSx}>Explore</Typography>
                         <Box>
                             <Link component={RouterLink} to="/" onClick={() => window.scrollTo(0, 0)} sx={footerLinkSx}>Home</Link>
                             <Link href="https://bookeo.com/daveswimschool" target="_blank" rel="noopener noreferrer" sx={footerLinkSx}>Book Classes</Link>
-                            {/* <Link component={RouterLink} to="/#instructors" sx={footerLinkSx}>Our Instructors</Link> */}
                             <Link component={RouterLink} to="/contact" sx={footerLinkSx}>Contact Us</Link>
                             <Link component={RouterLink} to="/faq" sx={footerLinkSx}>FAQ</Link>
                         </Box>
                     </Grid>
 
-                    <Grid size={{ xs: 12, sm: 6, md: 4 }}>
-                        <Typography component="h2" sx={footerHeadingSx}>Contact Info</Typography>
-                        <Typography variant="body2" sx={{ color: 'rgba(255, 255, 255, 0.85)', mb: 2, lineHeight: 1.6 }}>
-                            Email: contact@daveswimschool.ca<br />
-                            Phone: 647 746-4644
-                        </Typography>
-                        <Stack direction="row" spacing={1} sx={{ mb: 3 }}>
-                            <Link
-                                href="https://www.facebook.com/daveswimschool"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                sx={{ lineHeight: 0 }}
-                            >
-                                <SocialButton size="small" aria-label="facebook">
-                                    <FacebookIcon />
-                                </SocialButton>
+                    {/* Get in Touch — half width on mobile, 4 cols on desktop */}
+                    <Grid size={{ xs: 6, md: 4 }}>
+                        <Typography component="h2" sx={footerHeadingSx}>Get in Touch</Typography>
+                        <Stack spacing={1} sx={{ mb: 2 }}>
+                            <Link href="mailto:contact@daveswimschool.ca" sx={{ ...footerLinkSx, fontSize: '0.88rem', wordBreak: 'break-word' }}>
+                                contact@daveswimschool.ca
                             </Link>
-                            <Link
-                                href="https://www.instagram.com/daveswimschool"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                sx={{ lineHeight: 0 }}
-                            >
-                                <SocialButton size="small" aria-label="instagram">
-                                    <InstagramIcon />
-                                </SocialButton>
+                            <Link href="tel:6477464644" sx={{ ...footerLinkSx, fontSize: '0.88rem' }}>
+                                647 746-4644
                             </Link>
                         </Stack>
-                        <Typography variant="caption" sx={{ color: 'rgba(255, 255, 255, 0.75)', display: 'block', lineHeight: 1.5 }}>
-                            For questions, date swaps, time changes, extra info, or payment transfers, please contact me.
+                        <Typography
+                            variant="caption"
+                            sx={{
+                                color: 'rgba(255, 255, 255, 0.55)',
+                                display: { xs: 'none', sm: 'block' },
+                                lineHeight: 1.6,
+                                maxWidth: 220,
+                                mb: 2.5,
+                            }}
+                        >
+                            Questions, reschedules, or payment transfers? Don't hesitate to reach out.
                         </Typography>
                     </Grid>
                 </Grid>

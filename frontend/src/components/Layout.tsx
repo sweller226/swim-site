@@ -1,5 +1,5 @@
 import { Box, CssBaseline } from '@mui/material';
-import Header from './Header';
+import NavBar from './NavBar';
 import Footer from './Footer';
 import Seo from '../seo/Seo';
 
@@ -12,7 +12,7 @@ const Layout = ({ children }: LayoutProps) => {
         <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
             <Seo />
             <CssBaseline />
-            <Header />
+            <NavBar />
             <Box component="main" sx={{ flexGrow: 1 }}>
                 {children}
             </Box>
