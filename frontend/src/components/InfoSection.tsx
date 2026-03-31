@@ -8,12 +8,12 @@ const InfoSection = () => {
     return (
         <Box sx={{ bgcolor: 'background.default' }}>
             <Container maxWidth="lg">
-                <Grid container spacing={{ xs: 4, md: 6 }}>
+                <Grid container spacing={{ xs: 8, md: 6 }}>
                     <Grid size={{ xs: 12, md: 6 }}>
                         <Typography variant="h3" component="h2" gutterBottom fontWeight="bold" color="primary.main">
                             What We Offer
                         </Typography>
-                        <Typography variant="body1">
+                        <Typography variant="body1" paragraph>
                             From Private On-Site lessons at our pool to lessons at yours, we provide flexible options to fit your goals.
                         </Typography>
                         <Stack spacing={2} sx={{ mb: 4 }}>

@@ -89,7 +89,7 @@ const Hero = () => {
           <TrustBadge icon={<AccessTimeIcon color="primary" />} text="Flexible Scheduling" />
         </Stack>
 
-        <Box sx={{ flex: 1, display: 'flex', alignItems: 'flex-start', paddingTop: 2, mt: 5 }}>
+        <Box sx={{ flex: 1, display: 'flex', alignItems: 'flex-start', paddingTop: 2, mt: { xs: 1, md: 5 } }}>
           <Grid container spacing={4}>
             <Grid size={{ xs: 12, md: 7 }}>
               <Typography

@@ -177,7 +177,7 @@ const LessonTypesSection = () => {
                                 $70/hr + $30/hr guard
                             </PriceTag>
                             <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-                                Rent our pool. Minimum 1 hour.
+                                Rent our pool. Minimum 2 hours.
                             </Typography>
                             <List dense disablePadding sx={{ mb: 2 }}>
                                 <ListItem disablePadding sx={{ mb: 1 }}>
