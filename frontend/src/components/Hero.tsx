@@ -1,5 +1,5 @@
 import { Box, Container, Typography, Button, Grid, Paper, Stack } from '@mui/material';
-import { styled, alpha, type Theme } from '@mui/material/styles';
+import { styled, alpha } from '@mui/material/styles';
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import SchoolIcon from '@mui/icons-material/School';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
