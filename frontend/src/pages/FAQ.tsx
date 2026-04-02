@@ -15,7 +15,7 @@ import Wave from '../components/Wave';
 import PageHeader from '../components/PageHeader';
 
 import faq1 from '../assets/faq1.jpg';
-import faq2 from '../assets/faq2.jpg';
+import faq2 from '../assets/faq2.webp';
 
 const faqs: { question: string; answer: string | ReactNode }[] = [
     {
