@@ -2,8 +2,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Hero from '../components/Hero';
 import InfoSection from '../components/InfoSection';
-// import InstructorList from '../components/InstructorList';
-// import Testimonials from '../components/Testimonials';
+import Instructor from '../components/Instructor';
 
 const Home = () => {
     const { hash } = useLocation();
@@ -19,8 +18,7 @@ const Home = () => {
         <>
             <Hero />
             <InfoSection />
-            {/* <InstructorList /> */}
-            {/* <Testimonials /> */}
+            {/* <Instructor/> */}
         </>
     );
 };

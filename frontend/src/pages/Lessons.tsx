@@ -92,7 +92,7 @@ const LessonTypesSection = () => {
                                 </Typography>
                             </Box>
                             <PriceTag variant="h6" component="p">
-                                $55 · 30 min &nbsp;|&nbsp; $72 · 45 min &nbsp;|&nbsp; $90 · 60 min
+                                $55 · 30 min &nbsp;|&nbsp; $72 · 45 min &nbsp;|&nbsp; $92 · 60 min
                             </PriceTag>
                             <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                                 1-2 students (same client). Students must be age 6+. Lessons taught at our pool.
@@ -133,7 +133,7 @@ const LessonTypesSection = () => {
                                 </Typography>
                             </Box>
                             <PriceTag variant="h6" component="p">
-                                $90 · 45 min &nbsp;|&nbsp; $110 · 60 min
+                                $92 · 45 min &nbsp;|&nbsp; $110 · 60 min
                             </PriceTag>
                             <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                                 We come to teach at your pool. Students can be of any age.
