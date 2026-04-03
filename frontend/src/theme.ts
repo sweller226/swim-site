@@ -8,6 +8,14 @@ declare module '@mui/material/styles' {
     interface SimplePaletteColorOptions {
         background?: string;
     }
+
+    interface Palette {
+        accent: PaletteColor;
+    }
+
+    interface PaletteOptions {
+        accent?: SimplePaletteColorOptions;
+    }
 }
 
 // Color Palette
@@ -25,13 +33,18 @@ const colors = {
         background: '#f4fafe',
     },
     background: {
-        default: '#f4fafe', // Very light blue/white
+        default: '#f4fafe',
         paper: '#ffffff',
     },
     text: {
         primary: '#0d2b3e',
         secondary: '#5f7682',
-        contrast: '#ffffff' // 244,250,254
+        contrast: '#ffffff',
+    },
+    accent: {
+        main: '#f26522',     
+        dark: '#c44e0f',      
+        background: '#fff4ee', 
     },
 };
 
@@ -42,6 +55,7 @@ let theme = createTheme({
         secondary: colors.secondary,
         background: colors.background,
         text: colors.text,
+        accent: colors.accent,
     },
     typography: {
         fontFamily: [

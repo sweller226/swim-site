@@ -75,134 +75,221 @@ const LessonTypesSection = () => {
                 All prices include applicable taxes, no extra charges at checkout.
             </Typography>
             <Grid container spacing={{ xs: 3, md: 4 }}>
-                    {/* Private On-Site */}
-                    <Grid size={{ xs: 12, md: 4 }}>
-                        <CourseCard
-                            elevation={3}
+                {/* Private On-Site */}
+                <Grid size={{ xs: 12, md: 4 }} sx={{flex: 1}}>
+                    <CourseCard
+                        elevation={3}
+                        sx={{ border: '2px solid', borderColor: 'secondary.light' }}
+                    >
+                        <MostPopularTag />
+                        <Box display="flex" alignItems="center" gap={2} mb={2.5}>
+                            <PersonIcon color="primary" fontSize="large" />
+                            <Typography variant="h5" component="h2" fontWeight="bold">
+                                On-Site
+                            </Typography>
+                        </Box>
+
+                        <Grid 
+                            container 
+                            spacing={5} 
                             sx={{
-                                border: '2px solid',
-                                borderColor: 'secondary.light',
+                                mb: 2,
+                                maxWidth: 500,      // or whatever fits your design
+                                mx: 'auto',         // centers horizontally
                             }}
                         >
-                            <MostPopularTag />
-                            <Box display="flex" alignItems="center" gap={2} mb={2}>
-                                <PersonIcon color="primary" fontSize="large" />
-                                <Typography variant="h5" component="h2" fontWeight="bold">
-                                    On-Site
+                            <Grid size={{ xs: 6 }}>
+                                <Typography variant="body2" fontWeight={700} color="secondary.main" sx={{ textTransform: 'uppercase', letterSpacing: '0.08em', display: 'block', mb: 0.75 }}>
+                                    Standard
                                 </Typography>
-                            </Box>
-                            <PriceTag variant="h6" component="p">
-                                $55 · 30 min &nbsp;|&nbsp; $72 · 45 min &nbsp;|&nbsp; $92 · 60 min
-                            </PriceTag>
-                            <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-                                1-2 students (same client). Students must be age 6+. Lessons taught at our pool.
-                            </Typography>
-                            <List dense disablePadding sx={{ mb: 2 }}>
-                                <ListItem disablePadding sx={{ mb: 1 }}>
-                                    <ListItemIcon sx={{ minWidth: 28 }}>
-                                        <CheckCircleIcon color="secondary" fontSize="small" />
-                                    </ListItemIcon>
-                                    <ListItemText primary="Request level you want us to teach. Supports an adaptable teaching style"/>
-                                </ListItem>
-                                <ListItem disablePadding sx={{ mb: 1 }}>
-                                    <ListItemIcon sx={{ minWidth: 28 }}>
-                                        <CheckCircleIcon color="secondary" fontSize="small" />
-                                    </ListItemIcon>
-                                    <ListItemText primary="Supports spot or recurring bookings"/>
-                                </ListItem>
-                                <ListItem disablePadding>
-                                    <ListItemIcon sx={{ minWidth: 28 }}>
-                                        <CheckCircleIcon color="secondary" fontSize="small" />
-                                    </ListItemIcon>
-                                    <ListItemText primary="$20 per additional student (per class)"/>
-                                </ListItem>
-                            </List>
-                            <Button variant="contained" size="large" fullWidth sx={{ mt: 'auto' }} component="a" href="https://bookeo.com/daveswimschool" target="_blank" rel="noopener noreferrer">
-                                Book Now
-                            </Button>
-                        </CourseCard>
-                    </Grid>
-
-                    {/* Travel */}
-                    <Grid size={{ xs: 12, md: 4 }}>
-                        <CourseCard elevation={2}>
-                            <Box display="flex" alignItems="center" gap={2} mb={2}>
-                                <LocationOnIcon color="primary" fontSize="large" />
-                                <Typography variant="h5" component="h3" fontWeight="bold">
-                                    Travel
+                                <Stack spacing={0.5}>
+                                    <Typography variant="body1" fontWeight={700} sx={{ whiteSpace: 'nowrap' }} color="secondary.main">$55 · 30 min</Typography>
+                                    <Typography variant="body1" fontWeight={700} sx={{ whiteSpace: 'nowrap' }} color="secondary.main">$72 · 45 min</Typography>
+                                    <Typography variant="body1" fontWeight={700} sx={{ whiteSpace: 'nowrap' }} color="secondary.main">$92 · 60 min</Typography>
+                                </Stack>
+                            </Grid>
+                            <Grid size={{ xs: 6 }}>
+                                <Typography variant="body2" fontWeight={700} sx={{ textTransform: 'uppercase', letterSpacing: '0.08em', display: 'block', mb: 0.75, color: 'accent.main' }}>
+                                    Bundle
                                 </Typography>
-                            </Box>
-                            <PriceTag variant="h6" component="p">
-                                $92 · 45 min &nbsp;|&nbsp; $110 · 60 min
-                            </PriceTag>
-                            <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-                                We come to teach at your pool. Students can be of any age.
-                            </Typography>
-                            <List dense disablePadding sx={{ mb: 2 }}>
-                                <ListItem disablePadding sx={{ mb: 1 }}>
-                                    <ListItemIcon sx={{ minWidth: 28 }}>
-                                        <CheckCircleIcon color="secondary" fontSize="small" />
-                                    </ListItemIcon>
-                                    <ListItemText primary="Request the level you want us to teach. Supports an adaptable teaching style" />
-                                </ListItem>
-                                <ListItem disablePadding sx={{ mb: 1 }}>
-                                    <ListItemIcon sx={{ minWidth: 28 }}>
-                                        <CheckCircleIcon color="secondary" fontSize="small" />
-                                    </ListItemIcon>
-                                    <ListItemText primary="Supports spot or recurring bookings"/>
-                                </ListItem>
-                                <ListItem disablePadding>
-                                    <ListItemIcon sx={{ minWidth: 28 }}>
-                                        <CheckCircleIcon color="secondary" fontSize="small" />
-                                    </ListItemIcon>
-                                    <ListItemText primary="$20 per additional student (per class)"/>
-                                </ListItem>
-                            </List>
-                            <Button variant="contained" size="large" fullWidth sx={{ mt: 'auto' }} component="a" href="https://bookeo.com/daveswimschool" target="_blank" rel="noopener noreferrer">
-                                Book Now
-                            </Button>
-                        </CourseCard>
-                    </Grid>
-
-                    {/* Renting */}
-                    <Grid size={{ xs: 12, md: 4 }}>
-                        <CourseCard elevation={2}>
-                            <Box display="flex" alignItems="center" gap={2} mb={2}>
-                                <PoolIcon color="primary" fontSize="large" />
-                                <Typography variant="h5" component="h3" fontWeight="bold">
-                                    Pool Rental
-                                </Typography>
-                            </Box>
-                            <PriceTag variant="h6" component="p">
-                                $70/hr + $30/hr guard
-                            </PriceTag>
-                            <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-                                Rent our pool. Minimum 2 hours.
-                            </Typography>
-                            <List dense disablePadding sx={{ mb: 2 }}>
-                                <ListItem disablePadding sx={{ mb: 1 }}>
-                                    <ListItemIcon sx={{ minWidth: 28 }}>
-                                        <CheckCircleIcon color="secondary" fontSize="small" />
-                                    </ListItemIcon>
-                                    <ListItemText primary="1 guard, up to 10 people in the pool at a time" />
-                                </ListItem>
-                                <ListItem disablePadding>
-                                    <ListItemIcon sx={{ minWidth: 28 }}>
-                                        <CheckCircleIcon color="secondary" fontSize="small" />
-                                    </ListItemIcon>
-                                    <ListItemText primary="Swimmers must be age 6+" />
-                                </ListItem>
-                            </List>
-                            <Button variant="contained" size="large" fullWidth sx={{ mt: 'auto' }} component="a" href="https://bookeo.com/daveswimschool" target="_blank" rel="noopener noreferrer">
-                                Book Now
-                            </Button>
-                        </CourseCard>
-                    </Grid>
+                                <Stack spacing={0.5}>
+                                    <Typography variant="body1" fontWeight={700} sx={{ color: 'accent.main', whiteSpace: 'nowrap' }}>$46 · 30 min</Typography>
+                                    <Typography variant="body1" fontWeight={700} sx={{ color: 'accent.main', whiteSpace: 'nowrap' }}>$60 · 45 min</Typography>
+                                    <Typography variant="body1" fontWeight={700} sx={{ color: 'accent.main', whiteSpace: 'nowrap' }}>$77 · 60 min</Typography>
+                                </Stack>
+                            </Grid>
+                        </Grid>
+                        
+                        <Box sx={{ flex: 1 }} />
+                        <List dense disablePadding sx={{ mb: 2 }}>
+                        {[
+                            "Private lessons in our pool",
+                            "Choose your level or get assessed",
+                            "Flexible one-time or recurring booking",
+                            "1–2 students included, +$20 per extra",
+                        ].map((text) => (
+                            <ListItem
+                            key={text}
+                            disablePadding
+                            sx={{
+                                alignItems: 'flex-start',
+                                mb: 1.25,
+                            }}
+                            >
+                            <ListItemIcon sx={{ minWidth: 30, mt: '2px' }}>
+                                <CheckCircleIcon color="secondary" fontSize="small" />
+                            </ListItemIcon>
+                            <ListItemText
+                                primary={text}
+                                primaryTypographyProps={{
+                                variant: 'body2',
+                                color: 'text.primary',
+                                lineHeight: 1.5,
+                                fontWeight: 500,
+                                }}
+                            />
+                            </ListItem>
+                        ))}
+                        </List>
+                        <Button variant="contained" size="large" fullWidth sx={{ mt: 'auto' }} component="a" href="https://bookeo.com/daveswimschool" target="_blank" rel="noopener noreferrer">
+                            Book Now
+                        </Button>
+                    </CourseCard>
                 </Grid>
+
+                {/* Travel */}
+                <Grid size={{ xs: 12, md: 4 }} sx={{flex: 1}}>
+                    <CourseCard elevation={2}>
+                        <Box display="flex" alignItems="center" gap={2} mb={2.5}>
+                            <LocationOnIcon color="primary" fontSize="large" />
+                            <Typography variant="h5" component="h3" fontWeight="bold">
+                                Travel
+                            </Typography>
+                        </Box>
+ 
+                        <Grid
+                            container
+                            spacing={6}
+                            sx={{
+                                mb: 2,
+                                maxWidth: 500,
+                                mx: 'auto',
+                            }}
+                        >
+                            <Grid size={{ xs: 6 }}>
+                                <Typography variant="body2" fontWeight={700} color="secondary.main" sx={{ textTransform: 'uppercase', letterSpacing: '0.08em', display: 'block', mb: 0.75 }}>
+                                    Standard
+                                </Typography>
+                                <Stack spacing={0.5}>
+                                    <Typography variant="body1" fontWeight={700} color="secondary.main" sx={{ whiteSpace: 'nowrap' }}>$92 · 45 min</Typography>
+                                    <Typography variant="body1" fontWeight={700} color="secondary.main" sx={{ whiteSpace: 'nowrap' }}>$110 · 60 min</Typography>
+                                </Stack>
+                            </Grid>
+                            <Grid size={{ xs: 6 }}>
+                                <Typography variant="body2" fontWeight={700} sx={{ textTransform: 'uppercase', letterSpacing: '0.08em', display: 'block', mb: 0.75, color: 'accent.main' }}>
+                                    Bundle
+                                </Typography>
+                                <Stack spacing={0.5}>
+                                    <Typography variant="body1" fontWeight={700} sx={{ color: 'accent.main' }}>$77 · 45 min</Typography>
+                                    <Typography variant="body1" fontWeight={700} sx={{ color: 'accent.main' }}>$92 · 60 min</Typography>
+                                </Stack>
+                            </Grid>
+                        </Grid>
+ 
+                        <Box sx={{ flex: 1 }} />
+                        <List dense disablePadding sx={{ mb: 2 }}>
+                            {[
+                                "Travel lessons to your pool",
+                                "Choose your level or get assessed",
+                                "Flexible one-time or recurring booking",
+                                "1–2 students included, +$20 per extra",
+                            ].map((text) => (
+                                <ListItem
+                                    key={text}
+                                    disablePadding
+                                    sx={{ alignItems: 'flex-start', mb: 1.25 }}
+                                >
+                                    <ListItemIcon sx={{ minWidth: 30, mt: '2px' }}>
+                                        <CheckCircleIcon color="secondary" fontSize="small" />
+                                    </ListItemIcon>
+                                    <ListItemText
+                                        primary={text}
+                                        primaryTypographyProps={{
+                                            variant: 'body2',
+                                            color: 'text.primary',
+                                            lineHeight: 1.5,
+                                            fontWeight: 500,
+                                        }}
+                                    />
+                                </ListItem>
+                            ))}
+                        </List>
+                        <Button variant="contained" size="large" fullWidth sx={{ mt: 'auto' }} component="a" href="https://bookeo.com/daveswimschool" target="_blank" rel="noopener noreferrer">
+                            Book Now
+                        </Button>
+                    </CourseCard>
+                </Grid>
+
+                {/* Pool Rental */}
+                <Grid size={{ xs: 12, md: 4 }} sx={{flex: 1}}>
+                    <CourseCard elevation={2}>
+                        <Box display="flex" alignItems="center" gap={2} mb={2}>
+                            <PoolIcon color="primary" fontSize="large" />
+                            <Typography variant="h5" component="h3" fontWeight="bold">
+                                Pool Rental
+                            </Typography>
+                        </Box>
+
+                        <PriceTag variant="h6" component="p">
+                            $70/hr + $30/hr guard
+                        </PriceTag>
+
+                        <Typography
+                            variant="body2"
+                            color="text.primary"
+                            sx={{ mb: 2 }}
+                        >
+                            Private pool access for lessons, group swims, or events.
+                        </Typography>
+
+                        <Box sx={{ flex: 1 }} />
+                        <List dense disablePadding sx={{ mb: 2 }}>
+                        {[
+                            "Rent our pool, minimum 2 hours",
+                            "1 lifeguard included",
+                            "Flexible one-time or recurring booking",
+                            "Ages 6+ only",
+                            "10 swimmers at a time"
+                        ].map((text) => (
+                            <ListItem
+                            key={text}
+                            disablePadding
+                            sx={{ alignItems: 'flex-start', mb: 1.25 }}
+                            >
+                            <ListItemIcon sx={{ minWidth: 30, mt: '2px' }}>
+                                <CheckCircleIcon color="secondary" fontSize="small" />
+                            </ListItemIcon>
+                            <ListItemText
+                                primary={text}
+                                primaryTypographyProps={{
+                                variant: 'body2',
+                                color: 'text.primary',
+                                lineHeight: 1.5,
+                                fontWeight: 500,
+                                }}
+                            />
+                            </ListItem>
+                        ))}
+                        </List>
+                        <Button variant="contained" size="large" fullWidth sx={{ mt: 'auto' }} component="a" href="https://bookeo.com/daveswimschool" target="_blank" rel="noopener noreferrer">
+                            Book Now
+                        </Button>
+                    </CourseCard>
+                </Grid>
+            </Grid>
         </>
     );
 };
-
 
 const BundlesSection = () => {
     return (

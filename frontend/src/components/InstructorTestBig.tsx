@@ -1,7 +1,7 @@
 import { Box, Container, Typography, Chip, Stack } from '@mui/material';
-import jenInPool from '../assets/jenInPool.webp';
+import jenHeadshotBlur from '../assets/jenHeadshotBlur.webp';
 
-const InstructorSection = () => {
+const InstructorTestBig = () => {
     return (
         <Box
             sx={{
@@ -39,9 +39,8 @@ const InstructorSection = () => {
                     variant="h3"
                     color="primary.main"
                     sx={{
-                        letterSpacing: 4,
                         display: 'block',
-                        mb: 6,
+                        mb: 4,
                         fontSize: '0.7rem',
                     }}
                 >
@@ -76,7 +75,7 @@ const InstructorSection = () => {
                         />
                         <Box
                             component="img"
-                            src={jenInPool}
+                            src={jenHeadshotBlur}
                             alt="Jen, swim instructor at Dave Swim School"
                             sx={{
                                 position: 'relative',
@@ -101,23 +100,18 @@ const InstructorSection = () => {
                         </Typography>
 
                         <Typography variant="body1" color="text.secondary" paragraph>
-                            I've been a swim instructor with the City of Vaughan since 2023.
+                            I'm a certified swim instructor and lifesaving instructor with the Lifesaving Society, with a passion for teaching that extends well beyond the pool. I also instruct dance, coach soccer, and lead youth programs across Toronto and Vaughan.
                         </Typography>
 
                         <Typography variant="body1" color="text.secondary" paragraph>
-                            I am a certified Lifesaving Instructor and Emergency First Aid
-                            Instructor through the Lifesaving Society, with both CPR-C and
-                            CPR-B certifications.
+                            I've taught swimmers of all ages and skill levels through the City of Vaughan, tailoring lessons to the individual and providing the kind of structured, encouraging feedback that builds real confidence in the water.
                         </Typography>
 
                         <Typography variant="body1" color="text.secondary" paragraph>
-                            Beyond swimming, I teach dance and coach soccer. I'm
-                            passionate about creating a positive, encouraging environment
-                            for every student. I meet each swimmer exactly where they are
-                            and build their confidence from there.
+                            My approach is patient, adaptable, and safety-first. Whether you're taking your first strokes or working toward certification, I'll meet you where you are and help you get where you want to go.
                         </Typography>
-
-                        <Box sx={{ mt: 4 }}>
+                        
+                        <Box sx={{ mt: 2 }}>
                             <Typography
                                 variant="subtitle1"
                                 fontWeight="bold"
@@ -127,7 +121,7 @@ const InstructorSection = () => {
                                 Jen T.
                             </Typography>
                             <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-                                Swim Instructor · Dave Swim School
+                                Swim Instructor - Dave Swim School
                             </Typography>
                             <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap>
                                 {[
@@ -156,4 +150,4 @@ const InstructorSection = () => {
     );
 };
 
-export default InstructorSection;
+export default InstructorTestBig;

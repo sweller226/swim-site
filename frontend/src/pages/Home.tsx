@@ -1,6 +1,6 @@
 import Hero from '../components/Hero';
 import InfoSection from '../components/InfoSection';
-// import Instructor from '../components/Instructor';
+import InstructorTestBig from '../components/InstructorTestBig';
 
 const Home = () => {
 
@@ -8,7 +8,7 @@ const Home = () => {
         <>
             <Hero />
             <InfoSection />
-            {/* <Instructor/> */}
+            <InstructorTestBig/>
         </>
     );
 };
