@@ -140,7 +140,7 @@ const Footer = () => {
                                 mb: 2.5,
                             }}
                         >
-                            Questions, reschedules, or payment transfers? Don't hesitate to reach out.
+                            Questions, cancellations or other issues? Don't hesitate to reach out.
                         </Typography>
                     </Grid>
                 </Grid>

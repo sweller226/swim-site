@@ -100,11 +100,11 @@ const InstructorTestBig = () => {
                         </Typography>
 
                         <Typography variant="body1" color="text.secondary" paragraph>
-                            I'm a certified swim instructor and lifesaving instructor with the Lifesaving Society, with a passion for teaching that extends well beyond the pool. I also instruct dance, coach soccer, and lead youth programs across Toronto and Vaughan.
+                            I'm a certified swim instructor and lifesaving instructor with the Lifesaving Society. My teaching experience extends well beyond the pool, I also instruct dance, coach soccer, and lead youth programs across Toronto and Vaughan.
                         </Typography>
 
                         <Typography variant="body1" color="text.secondary" paragraph>
-                            I've taught swimmers of all ages and skill levels through the City of Vaughan, tailoring lessons to the individual and providing the kind of structured, encouraging feedback that builds real confidence in the water.
+                            I've taught swimmers of all ages and skill levels through the City of Vaughan, including those with learning differences, or physical disabilties.
                         </Typography>
 
                         <Typography variant="body1" color="text.secondary" paragraph>

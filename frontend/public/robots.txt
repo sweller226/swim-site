@@ -1,2 +1,4 @@
 User-agent: *
 Disallow:
+
+Sitemap: https://daveswimschool.ca/sitemap.xml

@@ -21,9 +21,19 @@ export const SITE_NAME = "Dave's Swim School";
  * Absolute page URL for canonical / og:url (trailing slash only on root).
  */
 export function getCanonicalUrl(siteUrl: string, pathname: string): string {
-    const path = pathname.length > 1 && pathname.endsWith('/') ? pathname.slice(0, -1) : pathname;
-    const suffix = path === '/' || path === '' ? '/' : path;
-    return `${siteUrl}${suffix}`;
+    let path = pathname.trim();
+
+    // Ensure leading slash
+    if (!path.startsWith('/')) {
+        path = `/${path}`;
+    }
+
+    // Remove trailing slash except for root
+    if (path !== '/') {
+        path = path.replace(/\/+$/, '');
+    }
+
+    return `${siteUrl}${path}`;
 }
 
 export function getAbsoluteOgImageUrl(siteUrl: string, imagePath: string): string {

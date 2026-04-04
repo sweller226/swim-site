@@ -20,7 +20,7 @@ import faq2 from '../assets/faq2.webp';
 const faqs: { question: string; answer: string | ReactNode }[] = [
     {
         question: 'What ages do you teach?',
-        answer: 'We offer Private On-Site lessons and pool rental for swimmers ages 6 and up, and any age group for travel lessons.',
+        answer: 'We offer private on-site lessons and pool rental for swimmers ages 6 and up, and any age group for travel lessons.',
     },
     {
         question: 'Do I need to bring anything?',
@@ -45,8 +45,12 @@ const faqs: { question: string; answer: string | ReactNode }[] = [
         ),
     },
     {
-        question: 'What is your cancellation policy?',
+        question: 'What is your cancellation policy for non-bundle lessons?',
         answer: 'We ask for at least 24 hours notice for cancellations or reschedules. For questions about specific bookings, contact us directly.',
+    },
+    {
+        question: 'What is your cancellation policy for bundles?',
+        answer: 'The 6-lesson package is sold as a bundle. If a refund is requested, the free first lesson is void, completed lessons will be charged at full price, and any remaining lessons will be refunded. To request a refund, please call us directly.'
     },
     {
         question: 'Where are lessons held?',
@@ -54,7 +58,7 @@ const faqs: { question: string; answer: string | ReactNode }[] = [
     },
     {
         question: 'Are your instructors certified?',
-        answer: 'Yes. Our instructors are experienced workers with the City of Toronto or Vaughan Parks and Recreation. All instructors are certified through the Lifesaving Society.',
+        answer: 'Yes. Our instructors are experienced professionals who have worked with the City of Toronto or Vaughan Parks and Recreation. All are certified through the Lifesaving Society, with qualifications including Swim Instructor, Emergency First Aid with CPR C, Lifesaving Instructor, and National Lifeguard.',
     },
     {
         question: 'Are your lessons suitable for everyone?',

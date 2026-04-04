@@ -100,7 +100,7 @@ const LessonTypesSection = () => {
                         >
                             <Grid size={{ xs: 6 }}>
                                 <Typography variant="body2" fontWeight={700} color="secondary.main" sx={{ textTransform: 'uppercase', letterSpacing: '0.08em', display: 'block', mb: 0.75 }}>
-                                    Standard
+                                    Individual
                                 </Typography>
                                 <Stack spacing={0.5}>
                                     <Typography variant="body1" fontWeight={700} sx={{ whiteSpace: 'nowrap' }} color="secondary.main">$55 · 30 min</Typography>
@@ -178,7 +178,7 @@ const LessonTypesSection = () => {
                         >
                             <Grid size={{ xs: 6 }}>
                                 <Typography variant="body2" fontWeight={700} color="secondary.main" sx={{ textTransform: 'uppercase', letterSpacing: '0.08em', display: 'block', mb: 0.75 }}>
-                                    Standard
+                                    Individual
                                 </Typography>
                                 <Stack spacing={0.5}>
                                     <Typography variant="body1" fontWeight={700} color="secondary.main" sx={{ whiteSpace: 'nowrap' }}>$92 · 45 min</Typography>
