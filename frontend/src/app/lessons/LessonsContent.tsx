@@ -78,7 +78,7 @@ const LessonTypesSection = () => {
             </Typography>
             <Grid container spacing={{ xs: 3, md: 4 }}>
                 {/* Private On-Site */}
-                <Grid size={{ xs: 12, md: 4 }} sx={{ flex: 1 }}>
+                <Grid size={{ xs: 12, md: 4 }} sx={{ flex: { md: 1 } }}>
                     <CourseCard
                         elevation={3}
                         sx={{ border: '2px solid', borderColor: 'secondary.light' }}
@@ -144,7 +144,7 @@ const LessonTypesSection = () => {
                 </Grid>
 
                 {/* Travel */}
-                <Grid size={{ xs: 12, md: 4 }} sx={{ flex: 1 }}>
+                <Grid size={{ xs: 12, md: 4 }} sx={{ flex: { md: 1 } }}>
                     <CourseCard elevation={2}>
                         <Box display="flex" alignItems="center" gap={2} mb={2.5}>
                             <LocationOnIcon color="primary" fontSize="large" />
@@ -204,7 +204,7 @@ const LessonTypesSection = () => {
                 </Grid>
 
                 {/* Pool Rental */}
-                <Grid size={{ xs: 12, md: 4 }} sx={{ flex: 1 }}>
+                <Grid size={{ xs: 12, md: 4 }} sx={{ flex: { md: 1 } }}>
                     <CourseCard elevation={2}>
                         <Box display="flex" alignItems="center" gap={2} mb={2}>
                             <PoolIcon color="primary" fontSize="large" />
