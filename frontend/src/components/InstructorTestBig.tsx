@@ -1,5 +1,4 @@
 import { Box, Container, Typography, Chip, Stack } from '@mui/material';
-import jenHeadshotBlur from '../assets/jenHeadshotBlur.webp';
 
 const InstructorTestBig = () => {
     return (
@@ -76,7 +75,7 @@ const InstructorTestBig = () => {
                         />
                         <Box
                             component="img"
-                            src={jenHeadshotBlur}
+                            src="/jenHeadshotBlur.webp"
                             alt="Jen, swim instructor at Dave Swim School"
                             sx={{
                                 position: 'relative',

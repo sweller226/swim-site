@@ -1,10 +1,13 @@
+'use client';
+
 import {
     AppBar, Toolbar, Typography, Button, Box, Container,
     IconButton, Drawer, List, ListItemButton, ListItemText, Divider
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import { Link, useLocation } from 'react-router-dom';
+import NextLink from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
 const navLinks = [
@@ -15,7 +18,7 @@ const navLinks = [
 ];
 
 const NavBar = () => {
-    const location = useLocation();
+    const pathname = usePathname();
     const [drawerOpen, setDrawerOpen] = useState(false);
 
     return (
@@ -24,8 +27,8 @@ const NavBar = () => {
                 <Toolbar disableGutters>
                     {/* Logo + Name */}
                     <Box
-                        component={Link}
-                        to="/"
+                        component={NextLink}
+                        href="/"
                         sx={{
                             display: 'flex',
                             alignItems: 'center',
@@ -36,7 +39,7 @@ const NavBar = () => {
                     >
                         <Box
                             component="img"
-                            src="/Logo-Small.svg"
+                            src="/Logo-Small.png"
                             alt="Dave's Swim School logo"
                             sx={{ height: 32, width: 'auto', display: 'block', mr: 1 }}
                         />
@@ -59,9 +62,9 @@ const NavBar = () => {
                         {navLinks.map(({ label, to }) => (
                             <Button
                                 key={to}
-                                color={location.pathname === to ? 'primary' : 'inherit'}
-                                component={Link}
-                                to={to}
+                                color={pathname === to ? 'primary' : 'inherit'}
+                                component={NextLink}
+                                href={to}
                             >
                                 {label}
                             </Button>
@@ -131,9 +134,9 @@ const NavBar = () => {
                     {navLinks.map(({ label, to }) => (
                         <ListItemButton
                             key={to}
-                            component={Link}
-                            to={to}
-                            selected={location.pathname === to}
+                            component={NextLink}
+                            href={to}
+                            selected={pathname === to}
                             onClick={() => setDrawerOpen(false)}
                             sx={{
                                 '&.Mui-selected': {

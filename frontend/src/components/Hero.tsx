@@ -1,9 +1,10 @@
+'use client';
+
 import { Box, Container, Typography, Button, Grid, Paper, Stack } from '@mui/material';
 import { styled, alpha } from '@mui/material/styles';
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import SchoolIcon from '@mui/icons-material/School';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import heroBg from '../assets/hero_background.webp';
 import Wave from './Wave'; // <-- import the reusable Wave component
 
 const HeroSection = styled('section')(({ theme }) => ({
@@ -62,7 +63,7 @@ const Hero = () => {
     <HeroSection aria-labelledby="hero-main-heading">
       <Box
         component="img"
-        src={heroBg}
+        src="/hero_background.webp"
         alt="low opacity background image of rippling water"
         aria-hidden
         sx={{

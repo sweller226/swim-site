@@ -1,5 +1,7 @@
+'use client';
+
 import { Box, Container, Typography, Grid, Button, Stack } from '@mui/material';
-import { Link } from 'react-router-dom';
+import NextLink from 'next/link';
 import PersonIcon from '@mui/icons-material/Person';
 import PoolIcon from '@mui/icons-material/Pool';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -51,7 +53,13 @@ const InfoSection = () => {
                                 </Box>
                             </Box>
                         </Stack>
-                        <Button variant="contained" color="primary" size="large" component={Link} to="/lessons">
+                        <Button
+                            component={NextLink}
+                            href="/lessons"
+                            variant="contained"
+                            color="primary"
+                            size="large"
+                        >
                             View Lessons &amp; Pricing
                         </Button>
                     </Grid>

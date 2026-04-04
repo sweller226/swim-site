@@ -1,6 +1,9 @@
+'use client';
+
 import { Box, Container, Typography, Link, Grid, Stack, IconButton, Divider } from '@mui/material';
 import { styled, alpha } from '@mui/material/styles';
-import { Link as RouterLink } from 'react-router-dom';
+import NextLink from 'next/link';
+import { useRouter } from 'next/navigation';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import Wave from './Wave';
@@ -58,6 +61,8 @@ const SocialButton = styled(IconButton)(({ theme }) => ({
 }));
 
 const Footer = () => {
+    const router = useRouter();
+
     return (
         <FooterContainer>
             <Wave height={220} top style={{ zIndex: 2 }} />
@@ -65,12 +70,12 @@ const Footer = () => {
             <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2 }}>
                 <Grid container spacing={{ xs: 5, md: 6 }}>
 
-                    {/* Brand block — full width on mobile, 4 cols on desktop */}
+                    {/* Brand block */}
                     <Grid size={{ xs: 12, md: 4 }}>
                         <Stack direction="row" alignItems="center" spacing={1} sx={{ mb: 2 }}>
                             <Box
                                 component="img"
-                                src="/Logo-Small.svg"
+                                src="/Logo-Small.png"
                                 alt="Dave's Swim School logo"
                                 sx={{ height: 32, width: 'auto', display: 'block', mr: 1 }}
                             />
@@ -103,23 +108,36 @@ const Footer = () => {
                         </Stack>
                     </Grid>
 
-                    {/* Divider — only on mobile, between brand and links */}
+                    {/* Divider — mobile only */}
                     <Grid size={{ xs: 12, md: 0 }} sx={{ display: { xs: 'block', md: 'none' }, py: 0 }}>
                         <Divider sx={{ borderColor: 'rgba(255,255,255,0.15)' }} />
                     </Grid>
 
-                    {/* Explore — half width on mobile, 4 cols on desktop */}
+                    {/* Explore */}
                     <Grid size={{ xs: 6, md: 4 }}>
                         <Typography component="h2" sx={footerHeadingSx}>Explore</Typography>
                         <Box>
-                            <Link component={RouterLink} to="/" onClick={() => window.scrollTo(0, 0)} sx={footerLinkSx}>Home</Link>
-                            <Link href="https://bookeo.com/daveswimschool" target="_blank" rel="noopener noreferrer" sx={footerLinkSx}>Book Classes</Link>
-                            <Link component={RouterLink} to="/contact" sx={footerLinkSx}>Contact Us</Link>
-                            <Link component={RouterLink} to="/faq" sx={footerLinkSx}>FAQ</Link>
+                            <Link
+                                component={NextLink}
+                                href="/"
+                                onClick={() => router.push('/')}
+                                sx={footerLinkSx}
+                            >
+                                Home
+                            </Link>
+                            <Link href="https://bookeo.com/daveswimschool" target="_blank" rel="noopener noreferrer" sx={footerLinkSx}>
+                                Book Classes
+                            </Link>
+                            <Link component={NextLink} href="/contact" sx={footerLinkSx}>
+                                Contact Us
+                            </Link>
+                            <Link component={NextLink} href="/faq" sx={footerLinkSx}>
+                                FAQ
+                            </Link>
                         </Box>
                     </Grid>
 
-                    {/* Get in Touch — half width on mobile, 4 cols on desktop */}
+                    {/* Get in Touch */}
                     <Grid size={{ xs: 6, md: 4 }}>
                         <Typography component="h2" sx={footerHeadingSx}>Get in Touch</Typography>
                         <Stack spacing={1} sx={{ mb: 2 }}>
