@@ -41,6 +41,8 @@ const NavBar = () => {
                             component="img"
                             src="/Logo-Small.png"
                             alt="Dave's Swim School logo"
+                            width={32}
+                            height={32}
                             sx={{ height: 32, width: 'auto', display: 'block', mr: 1 }}
                         />
                         <Typography

@@ -3,7 +3,6 @@
 import { Box, Container, Typography, Link, Grid, Stack, IconButton, Divider } from '@mui/material';
 import { styled, alpha } from '@mui/material/styles';
 import NextLink from 'next/link';
-import { useRouter } from 'next/navigation';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import Wave from './Wave';
@@ -61,8 +60,6 @@ const SocialButton = styled(IconButton)(({ theme }) => ({
 }));
 
 const Footer = () => {
-    const router = useRouter();
-
     return (
         <FooterContainer>
             <Wave height={220} top style={{ zIndex: 2 }} />
@@ -77,6 +74,8 @@ const Footer = () => {
                                 component="img"
                                 src="/Logo-Small.png"
                                 alt="Dave's Swim School logo"
+                                width={32}
+                                height={32}
                                 sx={{ height: 32, width: 'auto', display: 'block', mr: 1 }}
                             />
                             <Typography variant="h6" sx={{ color: 'text.contrast', fontWeight: 700, letterSpacing: '0.01em' }}>
@@ -117,12 +116,7 @@ const Footer = () => {
                     <Grid size={{ xs: 6, md: 4 }}>
                         <Typography component="h2" sx={footerHeadingSx}>Explore</Typography>
                         <Box>
-                            <Link
-                                component={NextLink}
-                                href="/"
-                                onClick={() => router.push('/')}
-                                sx={footerLinkSx}
-                            >
+                            <Link component={NextLink} href="/" sx={footerLinkSx}>
                                 Home
                             </Link>
                             <Link href="https://bookeo.com/daveswimschool" target="_blank" rel="noopener noreferrer" sx={footerLinkSx}>
