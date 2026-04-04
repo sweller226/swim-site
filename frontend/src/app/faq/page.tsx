@@ -1,8 +1,11 @@
 import type { Metadata } from 'next';
-import { getPageMeta } from '../../seo/pageMeta';
+import { FAQ_META } from '../../seo/pageMeta';
 import FAQContent from './FAQContent';
 
-export const metadata: Metadata = getPageMeta('/faq');
+export const metadata: Metadata = {
+    title: FAQ_META.title,
+    description: FAQ_META.description,
+};
 
 export default function FAQPage() {
     return <FAQContent />;

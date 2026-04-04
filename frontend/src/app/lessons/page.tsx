@@ -1,8 +1,11 @@
 import type { Metadata } from 'next';
-import { getPageMeta } from '../../seo/pageMeta';
-import LessonsContent from './LessonsContent.tsx';
+import { LESSONS_META } from '../../seo/pageMeta';
+import LessonsContent from './LessonsContent';
 
-export const metadata: Metadata = getPageMeta('/lessons');
+export const metadata: Metadata = {
+    title: LESSONS_META.title,
+    description: LESSONS_META.description,
+};
 
 export default function LessonsPage() {
     return <LessonsContent />;
