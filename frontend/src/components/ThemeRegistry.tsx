@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useServerInsertedHTML } from 'next/navigation';
 import { CacheProvider } from '@emotion/react';
 import { ThemeProvider, CssBaseline } from '@mui/material';
-import createEmotionCache from '../lib/emotion-cache.ts';
+import createEmotionCache from '../lib/emotion-cache';
 import theme from '../theme';
 
 export default function ThemeRegistry({ children }: { children: React.ReactNode }) {
