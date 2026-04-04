@@ -17,4 +17,8 @@ createRoot(root).render(
     </StrictMode>,
 );
 
-root.style.visibility = 'visible';
+requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+        root.style.visibility = 'visible';
+    });
+});
