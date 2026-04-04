@@ -6,7 +6,7 @@ const InstructorTestBig = () => {
         <Box
             sx={{
                 bgcolor: 'background.default',
-                py: { xs: 8, md: 8 },
+                py: { xs: 6, md: 8 },
                 mt: 4,
                 position: 'relative',
                 overflow: 'hidden',
@@ -15,8 +15,8 @@ const InstructorTestBig = () => {
                     position: 'absolute',
                     top: -80,
                     right: -80,
-                    width: 320,
-                    height: 320,
+                    width: { xs: 180, md: 320 },
+                    height: { xs: 180, md: 320 },
                     borderRadius: '50%',
                     bgcolor: 'rgba(255,255,255,0.05)',
                     pointerEvents: 'none',
@@ -26,8 +26,8 @@ const InstructorTestBig = () => {
                     position: 'absolute',
                     bottom: -60,
                     left: -60,
-                    width: 220,
-                    height: 220,
+                    width: { xs: 140, md: 220 },
+                    height: { xs: 140, md: 220 },
                     borderRadius: '50%',
                     bgcolor: 'rgba(255,255,255,0.05)',
                     pointerEvents: 'none',
@@ -40,8 +40,8 @@ const InstructorTestBig = () => {
                     color="primary.main"
                     sx={{
                         display: 'block',
-                        mb: 4,
-                        fontSize: '0.7rem',
+                        mb: { xs: 3, md: 4 },
+                        textAlign: 'left',
                     }}
                 >
                     Meet One of Our Instructors
@@ -51,15 +51,16 @@ const InstructorTestBig = () => {
                     sx={{
                         display: 'flex',
                         flexDirection: { xs: 'column', md: 'row' },
-                        alignItems: 'center',
-                        gap: { xs: 6, md: 8 },
+                        alignItems: { xs: 'center', md: 'flex-start' },
+                        gap: { xs: 4, md: 8 },
                     }}
                 >
+                    {/* Photo */}
                     <Box
                         sx={{
                             flexShrink: 0,
                             position: 'relative',
-                            alignSelf: { xs: 'center', md: 'flex-start' },
+                            alignSelf: 'center',
                         }}
                     >
                         <Box
@@ -67,8 +68,8 @@ const InstructorTestBig = () => {
                                 position: 'absolute',
                                 top: 12,
                                 left: 12,
-                                width: { xs: 220, md: 280 },
-                                height: { xs: 270, md: 340 },
+                                width: { xs: 240, sm: 220, md: 280 },
+                                height: { xs: 300, sm: 270, md: 340 },
                                 borderRadius: 3,
                                 zIndex: 0,
                             }}
@@ -80,8 +81,8 @@ const InstructorTestBig = () => {
                             sx={{
                                 position: 'relative',
                                 zIndex: 1,
-                                width: { xs: 220, md: 300 },
-                                height: { xs: 270, md: 370 },
+                                width: { xs: 240, sm: 220, md: 300 },
+                                height: { xs: 300, sm: 270, md: 370 },
                                 objectFit: 'cover',
                                 borderRadius: 3,
                                 display: 'block',
@@ -89,29 +90,46 @@ const InstructorTestBig = () => {
                         />
                     </Box>
 
-                    <Box sx={{ flex: 1 }}>
+                    {/* Text content */}
+                    <Box
+                        sx={{
+                            flex: 1,
+                            width: '100%',
+                            textAlign: { xs: 'center', md: 'left' },
+                        }}
+                    >
                         <Typography
                             variant="h4"
                             fontWeight="bold"
                             color="text.primary"
-                            sx={{ mb: 2 }}
+                            sx={{
+                                mb: 2,
+                                fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2.125rem' },
+                            }}
                         >
                             Hi, I'm Jen! 👋
                         </Typography>
 
                         <Typography variant="body1" color="text.secondary" paragraph>
-                            I'm a certified swim instructor and lifesaving instructor with the Lifesaving Society. My teaching experience extends well beyond the pool, I also instruct dance, coach soccer, and lead youth programs across Toronto and Vaughan.
+                            I'm a certified swim instructor and lifesaving instructor with the Lifesaving Society. My teaching experience extends well beyond the pool — I also instruct dance, coach soccer, and lead youth programs across Toronto and Vaughan.
                         </Typography>
 
                         <Typography variant="body1" color="text.secondary" paragraph>
-                            I've taught swimmers of all ages and skill levels through the City of Vaughan, including those with learning differences, or physical disabilties.
+                            I've taught swimmers of all ages and skill levels through the City of Vaughan, including those with learning differences or physical disabilities.
                         </Typography>
 
                         <Typography variant="body1" color="text.secondary" paragraph>
                             My approach is patient, adaptable, and safety-first. Whether you're taking your first strokes or working toward certification, I'll meet you where you are and help you get where you want to go.
                         </Typography>
-                        
-                        <Box sx={{ mt: 2 }}>
+
+                        <Box
+                            sx={{
+                                mt: 2,
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: { xs: 'center', md: 'flex-start' },
+                            }}
+                        >
                             <Typography
                                 variant="subtitle1"
                                 fontWeight="bold"
@@ -121,9 +139,15 @@ const InstructorTestBig = () => {
                                 Jen T.
                             </Typography>
                             <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-                                Swim Instructor - Dave Swim School
+                                Swim Instructor — Dave Swim School
                             </Typography>
-                            <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap>
+                            <Stack
+                                direction="row"
+                                spacing={1}
+                                flexWrap="wrap"
+                                useFlexGap
+                                justifyContent={{ xs: 'center', md: 'flex-start' }}
+                            >
                                 {[
                                     'Fully Certified',
                                     '3+ Years Experience',

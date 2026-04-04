@@ -109,7 +109,7 @@ const Hero = () => {
                   fontWeight="800"
                   sx={{ mb: 4, maxWidth: '600px', textShadow: '0 2px 10px rgba(244,250,254,0.5), 0 1px 4px rgba(244,250,254,0.5)' }}
                 >
-                  Private on-site and travel swim lessons for all ages. Flexible booking,
+                  Private on-site and travel swim lessons. Flexible booking,
                   experienced instructors, and a safe, fun environment.
                 </Typography>
 
