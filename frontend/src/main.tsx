@@ -5,7 +5,9 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App.tsx';
 
-createRoot(document.getElementById('root')!).render(
+const root = document.getElementById('root')!;
+
+createRoot(root).render(
     <StrictMode>
         <BrowserRouter>
             <HelmetProvider>
@@ -14,3 +16,5 @@ createRoot(document.getElementById('root')!).render(
         </BrowserRouter>
     </StrictMode>,
 );
+
+root.style.visibility = 'visible';
