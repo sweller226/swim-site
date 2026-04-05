@@ -185,6 +185,7 @@ const LessonTypesSection = () => {
                                 "Choose your level or get assessed",
                                 "Flexible one-time or recurring booking",
                                 "1–2 students included, +$20 per extra",
+                                "Open 10am-12pm, and 2pm-4pm"
                             ].map((text) => (
                                 <ListItem key={text} disablePadding sx={{ alignItems: 'flex-start', mb: 1.25 }}>
                                     <ListItemIcon sx={{ minWidth: 30, mt: '2px' }}>

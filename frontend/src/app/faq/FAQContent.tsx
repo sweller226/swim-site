@@ -15,40 +15,18 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Wave from '../../components/Wave';
 import PageHeader from '../../components/PageHeader';
 
-const faqs: { question: string; answer: string | ReactNode }[] = [
+const  faqs: { question: string; answer: string | ReactNode }[] = [
+    {
+        question: 'When are you open?',
+        answer: 'We are open Thursday through Sunday, from May 14 to Sep 13. Our On-Site lessons and Pool Rental are offered from 10am to 7pm. Our Travel lessons are offered from 10am to 12pm, and 2pm to 4pm.',
+    },
     {
         question: 'What ages do you teach?',
         answer: 'We offer private on-site lessons and pool rental for swimmers ages 6 and up, and any age group for travel lessons.',
     },
     {
-        question: 'Do I need to bring anything?',
-        answer: 'Please bring a swimsuit and towel. Goggles are optional but recommended. We provide any teaching aids needed for the lesson.',
-    },
-    {
-        question: 'How do I book or reschedule a lesson?',
-        answer: (
-            <>
-                You can book and manage lessons through our{' '}
-                <Link
-                    href="https://bookeo.com/daveswimschool"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    underline="always"
-                    sx={{ color: 'inherit', fontWeight: 500 }}
-                >
-                    online booking system, Bookeo
-                </Link>
-                . For reschedules or cancellations, please do so at least 24 hours in advance.
-            </>
-        ),
-    },
-    {
-        question: 'What is your cancellation policy for non-bundle lessons?',
-        answer: 'We ask for at least 24 hours notice for cancellations or reschedules. For questions about specific bookings, contact us directly.',
-    },
-    {
-        question: 'What is your cancellation policy for bundles?',
-        answer: 'The 6-lesson package is sold as a bundle. If a refund is requested, the free first lesson is void, completed lessons will be charged at full price, and any remaining lessons will be refunded. To request a refund, please call us directly.',
+        question: 'Are your lessons suitable for everyone?',
+        answer: "Absolutely. Our lessons are private, inclusive, and fully tailored to each swimmer's needs. Whether you're a nervous beginner, have a learning difference, a physical disability, or want to refine a specific skill.",
     },
     {
         question: 'Where are lessons held?',
@@ -59,8 +37,31 @@ const faqs: { question: string; answer: string | ReactNode }[] = [
         answer: 'Yes. Our instructors are experienced professionals who have worked with the City of Toronto or Vaughan Parks and Recreation. All are certified through the Lifesaving Society, with qualifications including Swim Instructor, Emergency First Aid with CPR C, Lifesaving Instructor, and National Lifeguard.',
     },
     {
-        question: 'Are your lessons suitable for everyone?',
-        answer: "Absolutely. Our lessons are private, inclusive, and fully tailored to each swimmer's needs. Whether you're a nervous beginner, have a learning difference, a physical disability, or want to refine a specific skill.",
+        question: 'Do I need to bring anything?',
+        answer: 'Please bring a swimsuit and towel. Goggles are optional but recommended. We provide any teaching aids needed for the lesson.',
+    },
+    {
+        question: 'What is your cancellation and rescheduling policy for lessons?',
+        answer: (
+            <>
+                We ask for at least 24 hours notice for cancellations or reschedules. Rescheduling or
+                canceling a lesson can be done through our{' '}
+                <Link
+                    href="https://bookeo.com/daveswimschool"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    underline="always"
+                    sx={{ color: 'inherit', fontWeight: 500 }}
+                >
+                    booking website
+                </Link>
+                , or by contacting us directly.
+            </>
+        ),
+    },
+    {
+        question: 'What is your refund policy for bundles?',
+        answer: 'The 6-lesson package is sold as a bundle. If a refund is requested, the free first lesson is void, completed lessons will be charged at full price, and any remaining lessons will be refunded. To request a refund, please call us directly.',
     },
 ];
 
