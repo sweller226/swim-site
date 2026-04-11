@@ -30,7 +30,7 @@ const  faqs: { question: string; answer: string | ReactNode }[] = [
     },
     {
         question: 'Where are lessons held?',
-        answer: 'Lessons take place at our fully-equipped backyard pool facility, at 66 Stonedene Blvd in North York. Access details will be confirmed when you book. If you have a pool at home, we can come to you for travel lessons.',
+        answer: 'Lessons take place at our fully-equipped backyard pool near Steeles and Bathurst in North York. Address and access details will be confirmed when you book. If you have a pool at home, we can come to you for travel lessons.',
     },
     {
         question: 'Are your instructors certified?',
