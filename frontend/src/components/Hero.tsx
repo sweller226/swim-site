@@ -127,7 +127,7 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 sx={{ px: 4, py: 0.90, fontSize: '1.1rem', borderRadius: 10}}
               >
-                NOW OPEN May 14 — Book Now
+                BOOK NOW — Spots Limited
               </Button>
             </Grid>
           </Grid>
