@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Container, Typography, Button, Grid, Paper, Stack, Divider } from '@mui/material';
+import { Box, Container, Typography, Button, Grid, Paper, Stack } from '@mui/material';
 import { styled, alpha } from '@mui/material/styles';
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import SchoolIcon from '@mui/icons-material/School';
