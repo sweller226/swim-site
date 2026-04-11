@@ -78,7 +78,7 @@ const InfoSection = () => {
                                         Well-Maintained Backyard Pool
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">
-                                        Lessons run in a fully-equipped, backyard pool that&apos;s kept comfortable for swimmers of all ages. Located at 66 Stonedene Blvd in North York.
+                                        Lessons run in a fully-equipped, backyard pool that&apos;s kept comfortable for swimmers of all ages. Located near Steeles and Bathurst in North York.
                                     </Typography>
                                 </Box>
                             </Box>
