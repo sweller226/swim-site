@@ -49,23 +49,6 @@ const StyledTrustBadge = styled(Paper)(({ theme }) => ({
   whiteSpace: 'nowrap',
 }));
 
-const SeasonTag = styled(Box)(({ theme }) => ({
-  display: 'inline-flex',
-  alignItems: 'center',
-  gap: theme.spacing(1),
-  background: '#ec9c11',
-  borderRadius: 80,
-  padding: '6px 14px', // mobile first
-  color: '#fff',
-
-  [theme.breakpoints.up('sm')]: {
-    padding: '7px 16px',
-  },
-  [theme.breakpoints.up('md')]: {
-    padding: '8px 18px',
-  },
-}));
-
 const TrustBadge = ({ icon, text }: { icon: React.ReactNode; text: string }) => (
   <StyledTrustBadge elevation={0}>
     {icon}
@@ -124,52 +107,28 @@ const Hero = () => {
                   Confidence in the Water Starts Here
                 </Typography>
 
-                <SeasonTag sx={{ mb: 2 }}>
-                  <Typography
-                    sx={{
-                      fontSize: { xs: '11px', sm: '12px', md: '13px' },
-                      fontWeight: 700,
-                      letterSpacing: '0.12em',
-                      textTransform: 'uppercase',
-                    }}
-                  >
-                    Now Open
-                  </Typography>
-
-                  <Typography
-                    sx={{
-                      fontSize: { xs: '13px', sm: '14px', md: '15px' },
-                      fontWeight: 600,
-                    }}
-                  >
-                    May 14 — Limited Spots!
-                  </Typography>
-                </SeasonTag>
-
               <Typography
                 variant="h5"
-                color="text.secondary"
+                color="primary.dark"
                 fontWeight="800"
-                sx={{ mb: 4, maxWidth: '600px', textShadow: '0 2px 10px rgba(244,250,254,0.5), 0 1px 4px rgba(244,250,254,0.5)' }}
+                sx={{ mb: 4, maxWidth: '600px', textShadow: '0 2px 10px rgba(244,250,254,0.5), 0 1px 4px rgba(244,250,254,0.5)', opacity: 0.8 }}
               >
                 Private on-site and travel swim lessons. Flexible booking,
                 experienced instructors, and a safe, fun environment.
               </Typography>
 
-              <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
-                <Button
-                  variant="contained"
-                  color="primary"
-                  size="large"
-                  component="a"
-                  href="https://bookeo.com/daveswimschool"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  sx={{ px: 4, py: 0.90, fontSize: '1.1rem', borderRadius: 10}}
-                >
-                  Book Now
-                </Button>
-              </Stack>
+              <Button
+                variant="contained"
+                color="primary"
+                size="large"
+                component="a"
+                href="https://bookeo.com/daveswimschool"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{ px: 4, py: 0.90, fontSize: '1.1rem', borderRadius: 10}}
+              >
+                NOW OPEN May 14 — Book Now
+              </Button>
             </Grid>
           </Grid>
         </Box>
