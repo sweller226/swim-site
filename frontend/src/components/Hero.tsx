@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Container, Typography, Button, Grid, Paper, Stack } from '@mui/material';
+import { Box, Container, Typography, Button, Grid, Paper, Stack, Divider } from '@mui/material';
 import { styled, alpha } from '@mui/material/styles';
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import SchoolIcon from '@mui/icons-material/School';
@@ -27,12 +27,12 @@ const HeroSection = styled('section')(({ theme }) => ({
     right: 0,
     bottom: 0,
     zIndex: 1,
-      backgroundImage: `linear-gradient(
-        90deg,
-        ${alpha(theme.palette.background.default, 0.85)} 10%,
-        ${alpha(theme.palette.background.default, 0.5)} 60%,
-        ${alpha(theme.palette.background.default, 0.2)} 100%
-      )`,
+    backgroundImage: `linear-gradient(
+      90deg,
+      ${alpha(theme.palette.background.default, 0.85)} 10%,
+      ${alpha(theme.palette.background.default, 0.5)} 60%,
+      ${alpha(theme.palette.background.default, 0.2)} 100%
+    )`,
   },
 }));
 
@@ -47,6 +47,23 @@ const StyledTrustBadge = styled(Paper)(({ theme }) => ({
   borderRadius: 80,
   backgroundColor: 'rgba(255, 255, 255, 0.9)',
   whiteSpace: 'nowrap',
+}));
+
+const SeasonTag = styled(Box)(({ theme }) => ({
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: theme.spacing(1),
+  background: '#ec9c11',
+  borderRadius: 80,
+  padding: '6px 14px', // mobile first
+  color: '#fff',
+
+  [theme.breakpoints.up('sm')]: {
+    padding: '7px 16px',
+  },
+  [theme.breakpoints.up('md')]: {
+    padding: '8px 18px',
+  },
 }));
 
 const TrustBadge = ({ icon, text }: { icon: React.ReactNode; text: string }) => (
@@ -91,28 +108,53 @@ const Hero = () => {
         </Stack>
 
         <Box sx={{ flex: 1, display: 'flex', alignItems: 'flex-start', paddingTop: 2, mt: { xs: 1, md: 5 } }}>
-          <Grid container spacing={4}>
+          <Grid container spacing={4} alignItems="flex-start" sx={{ flex: 1 }}>
             <Grid size={{ xs: 12, md: 7 }}>
-              <Typography
+                <Typography
                   id="hero-main-heading"
                   variant="h2"
                   component="h1"
                   fontWeight="800"
-                  gutterBottom
-                  sx={{ color: 'primary.main', mb: 1.5, textShadow: '0 2px 12px rgba(244,250,254,0.5), 0 1px 4px rgba(244,250,254,0.5)' }}
+                  sx={{
+                    color: 'primary.main',
+                    mb: 1.5,
+                    textShadow: '0 2px 12px rgba(244,250,254,0.5), 0 1px 4px rgba(244,250,254,0.5)'
+                  }}
                 >
                   Confidence in the Water Starts Here
                 </Typography>
 
-                <Typography
-                  variant="h5"
-                  color="text.secondary"
-                  fontWeight="800"
-                  sx={{ mb: 4, maxWidth: '600px', textShadow: '0 2px 10px rgba(244,250,254,0.5), 0 1px 4px rgba(244,250,254,0.5)' }}
-                >
-                  Private on-site and travel swim lessons. Flexible booking,
-                  experienced instructors, and a safe, fun environment.
-                </Typography>
+                <SeasonTag sx={{ mb: 2 }}>
+                  <Typography
+                    sx={{
+                      fontSize: { xs: '11px', sm: '12px', md: '13px' },
+                      fontWeight: 700,
+                      letterSpacing: '0.12em',
+                      textTransform: 'uppercase',
+                    }}
+                  >
+                    Now Open
+                  </Typography>
+
+                  <Typography
+                    sx={{
+                      fontSize: { xs: '13px', sm: '14px', md: '15px' },
+                      fontWeight: 600,
+                    }}
+                  >
+                    May 14 — Limited Spots!
+                  </Typography>
+                </SeasonTag>
+
+              <Typography
+                variant="h5"
+                color="text.secondary"
+                fontWeight="800"
+                sx={{ mb: 4, maxWidth: '600px', textShadow: '0 2px 10px rgba(244,250,254,0.5), 0 1px 4px rgba(244,250,254,0.5)' }}
+              >
+                Private on-site and travel swim lessons. Flexible booking,
+                experienced instructors, and a safe, fun environment.
+              </Typography>
 
               <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
                 <Button
@@ -123,6 +165,7 @@ const Hero = () => {
                   href="https://bookeo.com/daveswimschool"
                   target="_blank"
                   rel="noopener noreferrer"
+                  sx={{ px: 4, py: 0.90, fontSize: '1.1rem', borderRadius: 10}}
                 >
                   Book Now
                 </Button>
