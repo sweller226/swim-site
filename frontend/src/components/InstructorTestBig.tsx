@@ -100,7 +100,7 @@ const InstructorTestBig = () => {
                         <Typography
                             variant="h4"
                             fontWeight="bold"
-                            color="primary.main"
+                            color="primary.dark"
                             sx={{
                                 mb: 2,
                                 fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2.125rem' },

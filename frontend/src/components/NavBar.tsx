@@ -108,7 +108,7 @@ const NavBar = () => {
                             aria-label="open menu"
                             onClick={() => setDrawerOpen(true)}
                             size="large"
-                            sx={{ '& .MuiSvgIcon-root': { fontSize: '2.2rem' } }}
+                            sx={{ '& .MuiSvgIcon-root': { fontSize: '2.2rem', stroke: 'currentColor'} }}
                         >
                             <MenuIcon />
                         </IconButton>

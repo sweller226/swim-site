@@ -73,7 +73,7 @@ const LessonTypesSection = () => {
             <Typography variant="h3" component="h2" fontWeight="bold" color="primary.main" gutterBottom>
                 Lesson Types
             </Typography>
-            <Typography variant="h4" component="p" color="primary.main" sx={{ mb: 4, opacity: 0.8 }}>
+            <Typography variant="h4" component="p" color="primary.dark" sx={{ mb: 4, opacity: 0.8 }}>
                 All prices include applicable taxes, no extra charges at checkout.
             </Typography>
             <Grid container spacing={{ xs: 3, md: 4 }}>
