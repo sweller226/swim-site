@@ -12,6 +12,7 @@ const HeroSection = styled('section')(({ theme }) => ({
   overflow: 'hidden',
   minHeight: '600px',
   paddingBottom: '200px', // make room for the wave
+  backgroundColor: 'background.default',
   [theme.breakpoints.up('md')]: {
     minHeight: '660px',
     paddingBottom: '220px',

@@ -24,7 +24,10 @@ const NavBar = () => {
     return (
         <AppBar position="static" color="transparent" elevation={0} sx={{ bgcolor: 'background.default' }}>
             <Container maxWidth="lg">
-                <Toolbar disableGutters>
+                <Toolbar
+                    disableGutters
+                    sx={{ minHeight: { xs: 72, sm: 80 }, py: 1 }}  // taller bar
+                >
                     {/* Logo + Name */}
                     <Box
                         component={NextLink}
@@ -41,17 +44,15 @@ const NavBar = () => {
                             component="img"
                             src="/Logo-Small.png"
                             alt="Dave's Swim School logo"
-                            width={32}
-                            height={32}
-                            sx={{ height: 32, width: 'auto', display: 'block', mr: 1 }}
+                            sx={{ height: 44, width: 'auto', display: 'block', mr: 1.5 }}  // bigger logo
                         />
                         <Typography
-                            variant="h6"
+                            variant="h5"  // bumped from h6
                             noWrap
                             sx={{
                                 ml: 1,
                                 display: { xs: 'none', sm: 'flex' },
-                                fontWeight: 600,
+                                fontWeight: 700,  // slightly bolder
                                 letterSpacing: '.08rem',
                             }}
                         >
@@ -60,13 +61,15 @@ const NavBar = () => {
                     </Box>
 
                     {/* Desktop nav */}
-                    <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2, alignItems: 'center' }}>
+                    <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 1.5, alignItems: 'center' }}>
                         {navLinks.map(({ label, to }) => (
                             <Button
                                 key={to}
                                 color={pathname === to ? 'primary' : 'inherit'}
                                 component={NextLink}
                                 href={to}
+                                size="large"  // bumped from default
+                                sx={{ fontSize: '1rem', px: 2 }}  // larger text + padding
                             >
                                 {label}
                             </Button>
@@ -79,21 +82,23 @@ const NavBar = () => {
                             href="https://bookeo.com/daveswimschool"
                             target="_blank"
                             rel="noopener noreferrer"
+                            sx={{ fontSize: '1rem', px: 3, ml: 1 }}  // more padding on CTA
                         >
                             Book Now
                         </Button>
                     </Box>
 
                     {/* Mobile: Book Now + Hamburger */}
-                    <Box sx={{ display: { xs: 'flex', md: 'none' }, alignItems: 'center', gap: 1 }}>
+                    <Box sx={{ display: { xs: 'flex', md: 'none' }, alignItems: 'center', gap: 1.5 }}>
                         <Button
                             variant="contained"
                             color="primary"
-                            size="small"
+                            size="medium"  // bumped from small
                             component="a"
                             href="https://bookeo.com/daveswimschool"
                             target="_blank"
                             rel="noopener noreferrer"
+                            sx={{ fontSize: '0.9rem' }}
                         >
                             Book Now
                         </Button>
@@ -102,6 +107,8 @@ const NavBar = () => {
                             color="inherit"
                             aria-label="open menu"
                             onClick={() => setDrawerOpen(true)}
+                            size="large"
+                            sx={{ '& .MuiSvgIcon-root': { fontSize: '2.2rem' } }}
                         >
                             <MenuIcon />
                         </IconButton>
@@ -116,17 +123,18 @@ const NavBar = () => {
                 onClose={() => setDrawerOpen(false)}
                 PaperProps={{
                     sx: {
-                        width: 240,
+                        width: 200,
                         bgcolor: 'background.default',
                         color: 'text.primary',
                     },
                 }}
             >
-                <Box sx={{ display: 'flex', justifyContent: 'flex-end', p: 1 }}>
+                <Box sx={{ display: 'flex', justifyContent: 'flex-end', p: 1.5 }}>
                     <IconButton
                         onClick={() => setDrawerOpen(false)}
                         aria-label="close menu"
                         color="inherit"
+                        size="large"
                     >
                         <CloseIcon />
                     </IconButton>
@@ -141,9 +149,13 @@ const NavBar = () => {
                             selected={pathname === to}
                             onClick={() => setDrawerOpen(false)}
                             sx={{
+                                py: 1.5,  // taller list items
+                                '&:hover': {
+                                    color: 'white',
+                                },
                                 '&.Mui-selected': {
                                     bgcolor: 'primary.main',
-                                    color: 'primary.contrastText',
+                                    color: 'white',
                                     '&:hover': {
                                         bgcolor: 'primary.dark',
                                     },
@@ -152,7 +164,7 @@ const NavBar = () => {
                         >
                             <ListItemText
                                 primary={label}
-                                primaryTypographyProps={{ variant: 'button' }}
+                                primaryTypographyProps={{ variant: 'h6', fontWeight: 500, color: 'inherit' }}
                             />
                         </ListItemButton>
                     ))}
