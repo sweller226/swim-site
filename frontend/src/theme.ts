@@ -31,6 +31,7 @@ const colors = {
         light: '#4ccbb9',
         dark: '#007967',
         background: '#f4fafe',
+        contrastText: '#ffffff'
     },
     background: {
         default: '#f4fafe',
@@ -38,7 +39,7 @@ const colors = {
     },
     text: {
         primary: '#0d2b3e',
-        secondary: '#5f7682',
+        secondary: '#4f626c',
         contrast: '#ffffff',
     },
     accent: {

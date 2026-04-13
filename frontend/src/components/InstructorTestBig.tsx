@@ -1,4 +1,4 @@
-import { Box, Container, Typography, Chip, Stack } from '@mui/material';
+import { Box, Container, Typography, Chip, Stack, Button } from '@mui/material';
 
 const InstructorTestBig = () => {
     return (
@@ -6,7 +6,7 @@ const InstructorTestBig = () => {
             sx={{
                 bgcolor: 'background.default',
                 py: { xs: 6, md: 8 },
-                mt: 4,
+                mt: -2,
                 position: 'relative',
                 overflow: 'hidden',
                 '&::before': {
@@ -50,45 +50,35 @@ const InstructorTestBig = () => {
                     sx={{
                         display: 'flex',
                         flexDirection: { xs: 'column', md: 'row' },
-                        alignItems: { xs: 'center', md: 'flex-start' },
-                        gap: { xs: 4, md: 8 },
+                        alignItems: { xs: 'flex-start', md: 'flex-start' },
+                        gap: { xs: 3, md: 8 },
                     }}
                 >
-                    {/* Photo */}
+                    {/* === MOBILE: contact-card row (photo + name/chips) === */}
+                    {/* === DESKTOP: just the photo column === */}
                     <Box
                         sx={{
                             flexShrink: 0,
-                            position: 'relative',
-                            alignSelf: 'center',
+                            display: 'flex',
+                            flexDirection: { xs: 'row', md: 'column' },
+                            alignItems: { xs: 'center', md: 'flex-start' },
+                            gap: { xs: 2, md: 0 },
                         }}
                     >
-                        <Box
-                            sx={{
-                                position: 'absolute',
-                                top: 12,
-                                left: 12,
-                                width: { xs: 240, sm: 220, md: 280 },
-                                height: { xs: 300, sm: 270, md: 340 },
-                                borderRadius: 3,
-                                zIndex: 0,
-                            }}
-                        />
+                        {/* Photo */}
                         <Box
                             component="img"
                             src="/jenHeadshotBlur.webp"
                             alt="Jen, swim instructor at Dave's Swim School"
                             sx={{
-                                position: 'relative',
-                                zIndex: 1,
-                                width: { xs: 240, sm: 220, md: 300 },
-                                height: { xs: 300, sm: 270, md: 370 },
+                                flexShrink: 0,
+                                width: { xs: 180, sm: 160, md: 360 },
+                                height: { xs: 220, sm: 195, md: 450 },
                                 objectFit: 'cover',
                                 borderRadius: 3,
                                 display: 'block',
                             }}
                         />
-<<<<<<< Updated upstream
-=======
 
                         {/* Name + chips — shown beside photo on mobile, hidden on desktop */}
                         <Box sx={{ display: { xs: 'flex', md: 'none' }, flexDirection: 'column', gap: 0.5 }}>
@@ -96,7 +86,7 @@ const InstructorTestBig = () => {
                                 Jen T.
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
-                                Swim Instructor — Dave's Swim School
+                                Swim Instructor — Dave Swim School
                             </Typography>
                             <Stack direction="column" spacing={0.75} sx={{ mt: 0.5 }}>
                                 {['Fully Certified', '3+ Years Experience', 'Bilingual (FR/EN)'].map((label) => (
@@ -115,17 +105,10 @@ const InstructorTestBig = () => {
                                 ))}
                             </Stack>
                         </Box>
->>>>>>> Stashed changes
                     </Box>
 
                     {/* Text content */}
-                    <Box
-                        sx={{
-                            flex: 1,
-                            width: '100%',
-                            textAlign: { xs: 'center', md: 'left' },
-                        }}
-                    >
+                    <Box sx={{ flex: 1, width: '100%', textAlign: 'left' }}>
                         <Typography
                             variant="h4"
                             fontWeight="bold"
@@ -140,48 +123,34 @@ const InstructorTestBig = () => {
                         </Typography>
 
                         <Typography variant="body1" color="text.secondary" paragraph>
-                            I'm a certified swim instructor and lifesaving instructor with the Lifesaving Society. My teaching experience extends well beyond the pool — I also instruct dance, coach soccer, and lead youth programs across Toronto and Vaughan.
+                            I'm a certified swim and lifesaving instructor with the Lifesaving Society. I also teach dance, coach soccer, and lead youth programs across Toronto and Vaughan.
                         </Typography>
 
                         <Typography variant="body1" color="text.secondary" paragraph>
-                            I've taught swimmers of all ages and skill levels through the City of Vaughan, including those with learning differences or physical disabilities.
+                            I've worked with swimmers of all ages and skill levels through the City of Vaughan, including those with learning differences or physical disabilities.
                         </Typography>
 
                         <Typography variant="body1" color="text.secondary" paragraph>
-                            My approach is patient, adaptable, and safety-first. Whether you're taking your first strokes or working toward certification, I'll meet you where you are and help you get where you want to go.
+                            My approach is patient, adaptable, and safety-first. Whether you're just starting out or working toward certification, I'll meet you where you are and help you progress.
                         </Typography>
 
+                        {/* Name + chips — hidden on mobile, shown on desktop */}
                         <Box
                             sx={{
                                 mt: 2,
-                                display: 'flex',
+                                display: { xs: 'none', md: 'flex' },
                                 flexDirection: 'column',
-                                alignItems: { xs: 'center', md: 'flex-start' },
+                                alignItems: 'flex-start',
                             }}
                         >
-                            <Typography
-                                variant="subtitle1"
-                                fontWeight="bold"
-                                color="text.primary"
-                                sx={{ mb: 0.25 }}
-                            >
+                            <Typography variant="subtitle1" fontWeight="bold" color="text.primary" sx={{ mb: 0.25 }}>
                                 Jen T.
                             </Typography>
                             <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                                 Swim Instructor — Dave's Swim School
                             </Typography>
-                            <Stack
-                                direction="row"
-                                spacing={1}
-                                flexWrap="wrap"
-                                useFlexGap
-                                justifyContent={{ xs: 'center', md: 'flex-start' }}
-                            >
-                                {[
-                                    'Fully Certified',
-                                    '3+ Years Experience',
-                                    'Bilingual (FR/EN)',
-                                ].map((label) => (
+                            <Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: 1 }}>
+                                {['Fully Certified', '3+ Years Experience', 'Bilingual (FR/EN)'].map((label) => (
                                     <Chip
                                         key={label}
                                         label={label}
@@ -194,8 +163,20 @@ const InstructorTestBig = () => {
                                         }}
                                     />
                                 ))}
-                            </Stack>
+                            </Box>
                         </Box>
+
+                        <Button
+                            variant="contained"
+                            size="large"
+                            component="a"
+                            href="https://bookeo.com/daveswimschool"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            sx={{ mt: { xs: 2, md: 4 }, fontWeight: 700 }}
+                        >
+                            Book a Lesson
+                        </Button>
                     </Box>
                 </Box>
             </Container>
