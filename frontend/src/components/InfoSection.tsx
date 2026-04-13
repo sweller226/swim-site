@@ -1,7 +1,6 @@
 'use client';
 
-import { Box, Container, Typography, Grid, Button, Stack } from '@mui/material';
-import NextLink from 'next/link';
+import { Box, Container, Typography, Grid, Stack } from '@mui/material';
 import PersonIcon from '@mui/icons-material/Person';
 import PoolIcon from '@mui/icons-material/Pool';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -53,15 +52,6 @@ const InfoSection = () => {
                                 </Box>
                             </Box>
                         </Stack>
-                        <Button
-                            component={NextLink}
-                            href="/lessons"
-                            variant="contained"
-                            color="primary"
-                            size="large"
-                        >
-                            View Lessons &amp; Pricing
-                        </Button>
                     </Grid>
                     <Grid size={{ xs: 12, md: 6 }}>
                         <Typography variant="h3" component="h2" gutterBottom fontWeight="bold" color="primary.main">
