@@ -86,7 +86,7 @@ const InstructorTestBig = () => {
                                 Jen T.
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
-                                Swim Instructor — Dave Swim School
+                                Swim Instructor — Dave's Swim School
                             </Typography>
                             <Stack direction="column" spacing={0.75} sx={{ mt: 0.5 }}>
                                 {['Fully Certified', '3+ Years Experience', 'Bilingual (FR/EN)'].map((label) => (

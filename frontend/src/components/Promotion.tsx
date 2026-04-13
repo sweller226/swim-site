@@ -268,7 +268,7 @@ const FIRST_LESSON_CARD: PromoCardTemplateProps = {
   badge: 'April Only',
   title: 'First Lesson 50% Off',
   description:
-    'New to Dave Swim School? Try your first lesson at 50% off. Use the promo code below when booking online.',
+    'New to Dave\'s Swim School? Try your first lesson at 50% off. Use the promo code below when booking online.',
   stats: [
     { value: '50% off first lesson' },
     { value: 'New swimmers only' },
