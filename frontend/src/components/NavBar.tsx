@@ -12,7 +12,6 @@ import { useState } from 'react';
 
 const navLinks = [
     { label: 'Home', to: '/' },
-    { label: 'Lessons', to: '/lessons' },
     { label: 'FAQ', to: '/faq' },
     { label: 'Contact Us', to: '/contact' },
 ];
@@ -150,9 +149,6 @@ const NavBar = () => {
                             onClick={() => setDrawerOpen(false)}
                             sx={{
                                 py: 1.5,  // taller list items
-                                '&:hover': {
-                                    color: 'white',
-                                },
                                 '&.Mui-selected': {
                                     bgcolor: 'primary.main',
                                     color: 'white',

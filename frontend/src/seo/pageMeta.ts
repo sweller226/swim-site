@@ -17,13 +17,6 @@ export const DEFAULT_META: PageMeta = {
         "Private on-site and travel swim lessons in North York. Online booking, experienced instructors, and flexible scheduling for swimmers age 6+.",
 };
 
-/** Lessons page */
-export const LESSONS_META: PageMeta = {
-    title: "Swim Lesson Pricing | Dave's Swim School",
-    description:
-        "On-site, travel, and pool rental options with clear pricing. Punch-card style credit packages: six lessons for the price of five. Book through our online system.",
-};
-
 /** FAQ page */
 export const FAQ_META: PageMeta = {
     title: "Swim Lesson FAQ | Dave's Swim School",
