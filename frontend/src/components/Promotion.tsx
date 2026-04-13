@@ -59,6 +59,106 @@ const DecorativeCircle = styled(Box)({
     pointerEvents: 'none',
 });
 
+<<<<<<< Updated upstream
+=======
+        <Divider sx={{ mb: 2 }} />
+
+        {/* Checklist */}
+        <Stack spacing={1} sx={{ mb: 3 }}>
+          {checkItems.map((item) => (
+            <Box key={item.label} sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+              <CheckCircleIcon color={cfg.checkColor} sx={{ fontSize: 18, flexShrink: 0 }} />
+              {item.promoCode ? (
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                  <Typography variant="body2" fontWeight="bold">
+                    {item.label}
+                  </Typography>
+                  <CopyableCodeChip code={item.promoCode} onCopy={onCopy} />
+                </Box>
+              ) : (
+                <Typography variant="body2" fontWeight="bold">
+                  {item.label}
+                </Typography>
+              )}
+            </Box>
+          ))}
+        </Stack>
+
+        {/* CTA */}
+        <Box sx={{ mt: 'auto' }}>
+          {urgency && (
+            <Typography
+              variant="h5"
+              fontWeight="bold"
+              color="primary.main"
+              sx={{ display: 'block', textAlign: 'center', mb: 1 }}
+            >
+              {urgency}
+            </Typography>
+          )}
+          <Button
+            variant="contained"
+            color={cfg.btnColor}
+            size="large"
+            fullWidth
+            component="a"
+            href={ctaHref}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {ctaLabel}
+          </Button>
+        </Box>
+      </Box>
+    </PromoCard>
+  );
+};
+
+// --------------------
+// Card data
+// --------------------
+const FIRST_LESSON_CARD: PromoCardTemplateProps = {
+  variant: 'blue',
+  badge: 'April Only',
+  title: 'First Lesson 50% Off',
+  description:
+    'New to Dave\'s Swim School? Try your first lesson at 50% off. Use the promo code below when booking online.',
+  stats: [
+    { value: '50% off first lesson' },
+    { value: 'New swimmers only' },
+  ],
+  checkItems: [
+    { label: 'Valid for any lesson type' },
+    { label: 'Promo code:', promoCode: 'FIRSTLESSON50' },
+    { label: 'Offer ends April 30' },
+  ],
+  ctaLabel: 'Book Now — LIMITED TIME LEFT',
+  ctaHref: 'https://bookeo.com/daveswimschool',
+};
+
+const BUNDLE_CARD: PromoCardTemplateProps = {
+  variant: 'teal',
+  badge: 'Best Value',
+  title: 'Bundle Deal',
+  description:
+    'Our bundles work like punch cards, buy credits online and use them to book any lesson type: on-site, travel, or pool rental.',
+  stats: [
+    { value: '5 lessons + 1 free' },
+    { value: 'Save over 15%' },
+  ],
+  checkItems: [
+    { label: 'Punch-card credits, never expire' },
+    { label: 'Works for any lesson type' },
+    { label: 'Buy & book entirely online' },
+  ],
+  ctaLabel: 'Buy a Bundle',
+  ctaHref: 'https://bookeo.com/daveswimschool',
+};
+
+// --------------------
+// Main section
+// --------------------
+>>>>>>> Stashed changes
 const PromoSection = () => {
     return (
         <Box

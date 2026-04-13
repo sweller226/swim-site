@@ -76,7 +76,7 @@ const InstructorTestBig = () => {
                         <Box
                             component="img"
                             src="/jenHeadshotBlur.webp"
-                            alt="Jen, swim instructor at Dave Swim School"
+                            alt="Jen, swim instructor at Dave's Swim School"
                             sx={{
                                 position: 'relative',
                                 zIndex: 1,
@@ -87,6 +87,35 @@ const InstructorTestBig = () => {
                                 display: 'block',
                             }}
                         />
+<<<<<<< Updated upstream
+=======
+
+                        {/* Name + chips — shown beside photo on mobile, hidden on desktop */}
+                        <Box sx={{ display: { xs: 'flex', md: 'none' }, flexDirection: 'column', gap: 0.5 }}>
+                            <Typography variant="subtitle1" fontWeight="bold" color="text.primary">
+                                Jen T.
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                Swim Instructor — Dave's Swim School
+                            </Typography>
+                            <Stack direction="column" spacing={0.75} sx={{ mt: 0.5 }}>
+                                {['Fully Certified', '3+ Years Experience', 'Bilingual (FR/EN)'].map((label) => (
+                                    <Chip
+                                        key={label}
+                                        label={label}
+                                        size="small"
+                                        sx={{
+                                            bgcolor: 'primary.main',
+                                            color: 'primary.contrastText',
+                                            fontWeight: 500,
+                                            fontSize: '0.68rem',
+                                            alignSelf: 'flex-start',
+                                        }}
+                                    />
+                                ))}
+                            </Stack>
+                        </Box>
+>>>>>>> Stashed changes
                     </Box>
 
                     {/* Text content */}
@@ -139,7 +168,7 @@ const InstructorTestBig = () => {
                                 Jen T.
                             </Typography>
                             <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-                                Swim Instructor — Dave Swim School
+                                Swim Instructor — Dave's Swim School
                             </Typography>
                             <Stack
                                 direction="row"
