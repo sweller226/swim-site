@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import ThemeRegistry from '../components/ThemeRegistry';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
@@ -41,6 +42,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Footer />
           </Box>
         </ThemeRegistry>
+
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-BPEHXJQ6SS"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-BPEHXJQ6SS');
+          `}
+        </Script>
       </body>
     </html>
   );
